@@ -1,0 +1,892 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"h",
+				"href	Attr"
+			],
+			[
+				"name",
+				"namedRanges"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"show",
+				"showToast"
+			],
+			[
+				"remo",
+				"removeSpot"
+			],
+			[
+				"add",
+				"addSpot"
+			],
+			[
+				"tog",
+				"toggleSearch"
+			],
+			[
+				"elev",
+				"elevationShown"
+			],
+			[
+				"par",
+				"parsePostcode"
+			],
+			[
+				"se",
+				"searchResults"
+			],
+			[
+				"pla",
+				"placeName"
+			],
+			[
+				"ele",
+				"elevationShown"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"mari",
+				"margin-top"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"s",
+				"save"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"parse",
+				"parseFloat"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"de",
+				"deepRuleId"
+			],
+			[
+				"tru",
+				"truthTable"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"re",
+				"remove"
+			],
+			[
+				"chan",
+				"changeList"
+			],
+			[
+				"cha",
+				"changeList"
+			],
+			[
+				"pr",
+				"privateMethod"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"get",
+				"getPositionByIndex"
+			],
+			[
+				"rul",
+				"rulestable"
+			],
+			[
+				"seelcted",
+				"selectedvalue"
+			],
+			[
+				"compo",
+				"componentTemplate"
+			],
+			[
+				"ta",
+				"target	Attr"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"calc",
+				"calcData"
+			],
+			[
+				"message",
+				"messageBody"
+			],
+			[
+				"data-col",
+				"data-coldata"
+			],
+			[
+				"tar",
+				"targetControl"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 17389,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/styles/nav.scss",
+			"settings":
+			{
+				"buffer_size": 1319,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/app.js",
+			"settings":
+			{
+				"buffer_size": 93,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"git:qu",
+				"Git: Quick Commit"
+			],
+			[
+				"git: add",
+				"Git: Add..."
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"jscs",
+				"JSCS Formatter: Format this file"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"hex",
+				"Hex Viewer: Toggle Hex View"
+			],
+			[
+				"h",
+				"Hex Viewer: Toggle Hex View"
+			],
+			[
+				"",
+				"Hex Viewer: Toggle Hex View"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"php artisan tinker",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Dev/EditDoc/src/styles/edit.scss",
+		"/C/Dev/EditDoc/gulpfile.js",
+		"/C/Dev/EditDoc/src/js/app.js",
+		"/C/Dev/EditDoc/src/styles/layout.scss",
+		"/C/Users/markfa/Desktop/flexbox-editdoc/index.html",
+		"/C/Users/markfa/Desktop/flexbox-editdoc/flex.css",
+		"/C/Dev/EditDoc/src/styles/main.scss",
+		"/C/Dev/EditDoc/src/styles/flex.scss",
+		"/C/Users/markfa/Dropbox/formbuilder/css/style.css",
+		"/C/Dev/Excel2JS/gulpfile.js",
+		"/C/Dev/EditDoc/package.json",
+		"/C/Users/markfa/Dropbox/formbuilder/css/flex.css",
+		"/C/Dev/Material Maps/package.json",
+		"/C/Dev/Excel2JS/dist/bundle.js",
+		"/C/Dev/Excel2JS/bundle.js",
+		"/C/Dev/Excel2JS/package.json",
+		"/C/xampp/htdocs/ExCell/index.php",
+		"/C/xampp/htdocs/ExCell/upload.php",
+		"/C/xampp/htdocs/ExCell/process.php",
+		"/C/Users/markfa/Dropbox/Code/PHP/SimpleImage.php",
+		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Documentation/markdown/Overview/01-Getting-Started.md",
+		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/unitTests/rawTestData/CellGetRangeBoundaries.data",
+		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/unitTests/rawTestData/Calculation/Engineering/GESTEP.data",
+		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Examples/GnumericReader.php",
+		"/C/xampp/htdocs/exCell/vendor/composer/autoload_namespaces.php",
+		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Examples/data/continents/North America.txt",
+		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Classes/PHPExcel/Cell.php",
+		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Classes/PHPExcel/ReferenceHelper.php",
+		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/FormulaParser.php",
+		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/FormulaToken.php",
+		"/C/Users/markfa/Dropbox/OLM/Products/Calc Engine/Analysis and Design/POC/Calc Engine/parser-0.2.js",
+		"/C/Users/markfa/Dropbox/OLM/Products/Calc Engine/Analysis and Design/POC/Calc Engine/excelfunctions-0.1.js",
+		"/C/xampp/htdocs/Calc2/index.php",
+		"/C/xampp/htdocs/Calc2/classes/cell.php",
+		"//",
+		"/C/Dev/Formulae/node_modules/formula-vlookup/VLOOKUP.es6",
+		"/C/Dev/Formulae/package.json",
+		"/C/Dev/Material Maps/gulpfile.js",
+		"/C/Dev/Material Maps/src/js/controllers/toolbarController.js",
+		"/C/Dev/Material Maps/src/js/directives/index.js",
+		"/C/Dev/Material Maps/src/js/files.js",
+		"/C/Dev/Material Maps/src/js/controllers/bottomSheetController.js",
+		"/C/Dev/Material Maps/src/js/directives/infopanel.js",
+		"/C/Dev/Material Maps/src/js/directives/header.js",
+		"/C/Dev/Material Maps/index.php",
+		"/C/Dev/Material Maps/src/js/templates/bottomSheet.html",
+		"/C/Dev/Material Maps/src/js/directives/onReadFile.js",
+		"/C/Dev/Material Maps/src/js/app.js",
+		"/C/Dev/Material Maps/src/js/directives/fileRead.js",
+		"/C/xampp/osmaps/src/js/components/open-file-component.js",
+		"/C/xampp/osmaps/src/js/app.js",
+		"/C/xampp/osmaps/src/js/components/modal-component.js",
+		"/C/Dev/Material Maps/src/js/templates/searchResultsDialog.html",
+		"/C/Dev/Material Maps/src/js/controllers/mapController.js",
+		"/C/Dev/Material Maps/src/js/components/open-file-component.js",
+		"/C/Dev/Material Maps/todo.txt",
+		"/C/Dev/Material Maps/src/js/components/infopanel-component.js",
+		"/C/Dev/Material Maps/src/js/app-vue.js",
+		"/C/Dev/Material Maps/node_modules/angular-material/modules/closure/bottomSheet/bottomSheet.css",
+		"/C/Dev/Material Maps/node_modules/xmldoc/node_modules/sax/test/buffer-overrun.js",
+		"/C/Dev/Material Maps/src/js/controllers/index.js",
+		"/C/Users/markfa/Downloads/route.gpx",
+		"/C/Dev/Material Maps/index.html",
+		"/C/Dev/Material Maps/node_modules/dragula/example/example.css",
+		"/C/Dev/Material Maps/node_modules/babelify/node_modules/babel-core/node_modules/json5/test/parse-cases/new-lines/escaped-lf.json5",
+		"/C/Dev/Material Maps/node_modules/xml-writer/test/element.js",
+		"/C/Dev/Material Maps/src/js/templates/elevationChartBottomSheet.html",
+		"/C/Dev/Material Maps/node_modules/angular/bower.json",
+		"/C/Dev/Material Maps/node_modules/gulp-autoprefixer/node_modules/autoprefixer-core/node_modules/caniuse-db/region-usage-json/alt-oc.json",
+		"/C/Dev/Material Maps/node_modules/gulp-jshint/src/fileIgnored.js",
+		"/C/Dev/Material Maps/route-format.gpx",
+		"/C/Dev/Material Maps/node_modules/gulp-uglify/.idea/gulp-uglify.iml",
+		"/C/Dev/Material Maps/src/styles/chart.scss",
+		"/C/Dev/Material Maps/node_modules/angular-chartist.js/CHANGELOG.md",
+		"/C/Dev/Material Maps/node_modules/gulp-autoprefixer/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/css-hyphens.json",
+		"/C/Dev/Material Maps/src/styles/layout.scss",
+		"/C/Dev/Material Maps/node_modules/gulp-browserify/node_modules/browserify/node_modules/JSONStream/LICENSE.APACHE2",
+		"/C/Dev/Material Maps/node_modules/angular-chartist.js/LICENSE",
+		"/C/Dev/Material Maps/src/js/templates/header.html",
+		"/C/Dev/Material Maps/node_modules/gulp-jshint/node_modules/lodash/internal/toObject.js",
+		"/C/Dev/Material Maps/src/js/index.js",
+		"/C/Users/markfa/Desktop/careController.js",
+		"/C/Users/markfa/Desktop/index.htm",
+		"/C/Dev/Material Maps/src/js/templates/infopanel.html",
+		"/C/Dev/Material Maps/src/js/templates/search-results.html",
+		"/C/Dev/Material Maps/src/js/directives/searchResults.js",
+		"/C/Dev/Material Maps/node_modules/gulp-sass/node_modules/node-sass/node_modules/pangyp/node_modules/tar/lib/extended-header-writer.js",
+		"/C/Dev/Material Maps/node_modules/babelify/node_modules/babel-core/node_modules/json5/test/parse-cases/numbers/hexadecimal-empty.txt",
+		"/C/Dev/Material Maps/node_modules/gulp-jshint/node_modules/lodash/internal/baseForOwnRight.js",
+		"/C/Dev/Material Maps/node_modules/gulp-sass/node_modules/node-sass/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/test/json-schema-draft4/nullAndFormat.json",
+		"/C/Dev/Material Maps/node_modules/gulp/node_modules/gulp-util/lib/isNull.js",
+		"/C/Users/markfa/Desktop/app.js",
+		"/C/Dev/Material Maps/node_modules/babelify/node_modules/babel-core/node_modules/js-tokens/generate-index.js",
+		"/C/Dev/Material Maps/node_modules/babelify/node_modules/babel-core/node_modules/core-js/fn/get-iterator.js",
+		"/C/Dev/Material Maps/node_modules/gulp-uglify/.idea/atlassian-ide-plugin.xml",
+		"/C/Dev/Material Maps/node_modules/dragula/node_modules/contra/map.js",
+		"/C/Dev/Material Maps/node_modules/gulp-jshint/node_modules/lodash/function/modArgs.js",
+		"/C/Dev/Material Maps/node_modules/gulp-uglify/minifier.js",
+		"/C/Users/markfa/Dropbox/formbuilder/js/runtime.js",
+		"/C/Users/markfa/Dropbox/formbuilder/js/runtime.visibility.js",
+		"/C/Users/markfa/Dropbox/formbuilder/gruntfile.js",
+		"/C/Users/markfa/Dropbox/formbuilder/js/files.js",
+		"/C/Users/markfa/Dropbox/formbuilder/js/Shelter.Custom.js",
+		"/C/Users/markfa/Dropbox/formbuilder/js/utils.js",
+		"/C/Users/markfa/Dropbox/Code/nginx/main",
+		"/C/Users/markfa/Desktop/main",
+		"/C/Users/markfa/Desktop/error.log",
+		"/C/Users/markfa/Desktop/access.log",
+		"/C/Users/markfa/Dropbox/Code/nginx/api",
+		"/C/Users/markfa/Dropbox/Code/nginx/wordpress",
+		"/C/Users/markfa/Dropbox/Code/nginx/laravel",
+		"/C/Users/markfa/Desktop/Kinesis Order.txt",
+		"/C/Users/markfa/Desktop/Z97-A-ASUS-2501.CAP",
+		"/C/Users/markfa/Dropbox/formbuilder/js/Shelter.Templates.js",
+		"/C/Users/markfa/Dropbox/formbuilder/js/libs/jquery.tablesorter.js",
+		"/C/Users/markfa/Dropbox/formbuilder/js/libs/jquery.tablesorter.min.js",
+		"/C/Users/markfa/Dropbox/formbuilder/js/views.rulebuilder.js",
+		"/C/Users/markfa/Dropbox/formbuilder/templates/rules-table.html",
+		"/C/Users/markfa/Desktop/affordability",
+		"/C/Users/markfa/Desktop/api",
+		"/C/Users/markfa/Desktop/laravel",
+		"/C/Users/markfa/Dropbox/formbuilder/dist/data/lha.js",
+		"/C/xampp/postcodes/resources/assets/js/app.js",
+		"/C/xampp/postcodes/app/Http/Controllers/PostcodeController.php",
+		"/C/xampp/postcodes/resources/views/app.blade.php",
+		"/C/Users/markfa/Dropbox/formbuilder/dist/data/la.js",
+		"/C/Users/markfa/Dropbox/formbuilder/dist/data/lha.js.bak",
+		"/C/Dev/angularMaterial/src/app.js"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
+			"C:\\Users\\Mark\\Desktop\\formbuilder-0.5.5-full-source\\formbuilder\\js",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\templates",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\templates",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\templates",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
+			"FB.d(",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\templates",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
+			"F:\\Data\\Mark\\Dropbox\\formbuilder"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"#563d7c",
+			"font-size",
+			"age",
+			">p",
+			"section",
+			"Section",
+			"section",
+			"Section",
+			"section",
+			"Section",
+			"section",
+			"active",
+			"nav",
+			"elem",
+			"active",
+			"default",
+			"null",
+			"</p>",
+			"<p>",
+			"ADD",
+			"code",
+			"\\",
+			"getimagesize",
+			"$imageFileType",
+			"objPHPExcel",
+			"calc.",
+			"mprint",
+			"i",
+			"$this->formulae",
+			"$this->outputs",
+			"value",
+			"dependencies",
+			"outputs",
+			"inputs",
+			"explodeRange",
+			"$cell->getCoordinate()]",
+			"inputs",
+			"$list",
+			"showToast",
+			"\"",
+			"'",
+			"' +",
+			"route",
+			"self",
+			"//toastr.error(",
+			"showToast",
+			"<!-- end ngRepeat: item in controlWrapper.control.choices -->",
+			"<!-- ngRepeat: item in controlWrapper.control.choices -->",
+			"|",
+			"chartPoints",
+			"addSpot",
+			"chartPoints",
+			"location.G",
+			"chartPoints",
+			".series",
+			"$scope.chartData",
+			"results",
+			"addChartHoverEvent",
+			"e.row",
+			"plotElevation",
+			"jsAssets",
+			"elevationShown",
+			"white",
+			"md-inline-list-icon-label",
+			"md-list-item-content",
+			"$scope.placeName = '';",
+			"updateSearch",
+			"search = !search",
+			"followRoads",
+			"showSearch",
+			"Chart",
+			"makeChart",
+			"some",
+			"doughnut",
+			"DA4453",
+			"Person",
+			"person",
+			"app.",
+			"~",
+			"\"",
+			"break",
+			"console.log(",
+			"console.log",
+			"2 ",
+			"2",
+			"VM38047:12 ",
+			"VM38047:4 ",
+			"VM38047:5 ",
+			"VM38047:6 ",
+			"VM38047:16 ",
+			"VM38047:17 ",
+			"2FBRun",
+			"VM37985:4 ",
+			"VM37985:14 ",
+			"VM37985:10 ",
+			"VM37965:4 ",
+			"VM37965:14 ",
+			"2FBRun",
+			"VM37965:10 ",
+			"2FBRun",
+			"VM37636:10 ",
+			"VM37636:14 ",
+			"VM37636:4 ",
+			"2 ",
+			"VM37524:",
+			"this",
+			"1000",
+			"idByElement",
+			"fname",
+			"#",
+			"crawl",
+			"Main",
+			"filterbr",
+			"alertTpl",
+			"filterBrma",
+			"updateAffordableLhas",
+			"filterBrma",
+			"FBRun.northing",
+			"css/",
+			"filterBrma",
+			"cssHeader",
+			"\"",
+			"filterBrma",
+			"\"",
+			"initRulesTable",
+			"lha-table",
+			"filterBrma",
+			"writeDistrictResults"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"app",
+			"careApp",
+			"careController",
+			"elevation-chart",
+			"margin-top-15",
+			"FB.d(",
+			")",
+			"(",
+			"\"",
+			"{{#if fields.data-vis.selectedvalue}}",
+			"{{#if fields.data-vis.selectedvalue}} data-vis=\"{{fields.data-vis.selectedvalue}}\"{{/if}}",
+			"{{fields.data-vis.selectedvalue}}",
+			"\\\"",
+			"\"",
+			"\\\"",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1437,
+								1437
+							],
+							[
+								1445,
+								1445
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 306.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/styles/nav.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								48,
+								48
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 93,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								92
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 130.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 130.0
+	},
+	"project": "EditDoc.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"name",
+				"vendor\\phpoffice\\phpexcel\\Classes\\PHPExcel\\NamedRange.php"
+			],
+			[
+				"toolbar",
+				"src\\js\\controllers\\toolbarController.js"
+			],
+			[
+				"bottom",
+				"src\\js\\templates\\bottomSheet.html"
+			],
+			[
+				"map",
+				"src\\js\\controllers\\mapController.js"
+			],
+			[
+				"app",
+				"src\\js\\app.js"
+			],
+			[
+				"toolb",
+				"src\\js\\controllers\\toolbarController.js"
+			],
+			[
+				"file",
+				"src\\js\\files.js"
+			],
+			[
+				"app-v",
+				"src\\js\\app-vue.js"
+			],
+			[
+				"gulpf",
+				"gulpfile.js"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"chart",
+				"src\\styles\\chart.scss"
+			],
+			[
+				"layou",
+				"src\\styles\\layout.scss"
+			],
+			[
+				"app.j",
+				"src\\js\\app.js"
+			],
+			[
+				"todo",
+				"todo.txt"
+			],
+			[
+				"botto",
+				"node_modules\\angular-material\\modules\\closure\\bottomSheet\\bottomSheet.css"
+			],
+			[
+				"header",
+				"src\\js\\templates\\header.html"
+			],
+			[
+				"toolba",
+				"src\\js\\controllers\\toolbarController.js"
+			],
+			[
+				"info",
+				"src\\js\\templates\\infopanel.html"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"la.j",
+				"dist\\data\\la.js"
+			],
+			[
+				"lha",
+				"dist\\data\\lha.js"
+			],
+			[
+				"change_",
+				"database\\migrations\\2015_06_20_103127_change_lha_rates_column_titles.php"
+			],
+			[
+				"test",
+				"tests\\TestCase.php"
+			],
+			[
+				"inde",
+				"public\\index.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"F:\\Data\\Mark\\Dropbox\\formbuilder\\Form Builder.sublime-project"
+			]
+		],
+		"width": 498.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

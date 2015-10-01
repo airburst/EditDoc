@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test App</title>
+        <link rel="stylesheet" href="dist/assets/css/main.min.css" />
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Excel-to-JavaScript Formulae Converter">
+        <meta name="author" content="Mark Fairhurst">
+    </head>
+
+    <body>
+        <div class="flexbox-container">
+            <!-- Nav pane -->
+            <div class="nav-pane hidden-print hidden-xs hidden-sm">
+                <div class="panel-content">
+                    <!-- Nav bar -->
+                    <nav class="bs-docs-sidebar">
+                        <ul class="nav nav-stacked fixed">
+                            <li>
+                              <a href="#title">Title</a>
+                            </li>
+                            <li>
+                                <a href="#section1">Section 1</a>
+                                <ul class="nav nav-stacked">
+                                    <li><a href="#para1">Para 1</a></li>
+                                    <li><a href="#para2">Para 2</a></li>
+                                    <li><a href="#para3">Para 3</a></li>
+                                    <li><a href="#para4">Para 4</a></li>
+                                    <li><a href="#para5">Para 5</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#section2">Section 2</a>
+                            </li>
+                            <li>
+                              <a href="#section3">Section 3</a>
+                              <ul class="nav nav-stacked">
+                                <li><a href="#modals-examples">Examples</a></li>
+                                <li><a href="#modals-sizes">Sizes</a></li>
+                                <li><a href="#modals-remove-animation">Remove animation</a></li>
+                                <li><a href="#modals-related-target">Varying content based on trigger button</a></li>
+                                <li><a href="#modals-usage">Usage</a></li>
+                                <li><a href="#modals-options">Options</a></li>
+                                <li><a href="#modals-methods">Methods</a></li>
+                                <li><a href="#modals-events">Events</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a href="#section4">Section 4</a>
+                              <ul class="nav nav-stacked">
+                                <li><a href="#dropdowns-examples">Examples</a></li>
+                                <li><a href="#dropdowns-usage">Usage</a></li>
+                                <li><a href="#dropdowns-methods">Methods</a></li>
+                                <li><a href="#dropdowns-events">Events</a></li>
+                              </ul>
+                            </li>
+                        </ul>
+                  </nav>
+
+                </div>
+            </div>
+            
+            <!-- Main doc -->
+            <div class="doc-pane">
+                <div class="panel-content">
+                    <!-- The doc contents -->
+                    <h1 id="title">Doc Title</h1>
+
+                    <h2 id="section1">Section 1</h2>
+                    <a class="editable" id="para1" onclick="this.setAttribute('data-state', this.getAttribute('data-state') === 'show' ? 'hide' : 'show');">
+                        <div class="btn-group btn-group-xs edit-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-primary" aria-label="edit text" onclick="console.log('Edit');">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" aria-label="move text" onclick="console.log('Move');">
+                                <span class="glyphicon glyphicon-move" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" aria-label="delete text" onclick="console.log('Delete');">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget felis metus. Donec at ornare ex, eget scelerisque lorem. Praesent at ante non ante vestibulum ultricies ac a tellus. Praesent faucibus porttitor odio, eget dignissim sapien. Nunc sapien leo, posuere posuere nibh id, iaculis accumsan est. Sed quis lacus vitae velit imperdiet semper. Sed non luctus arcu.
+                    </a>
+
+                    <a class="editable" id="para2" onclick="this.setAttribute('data-state', this.getAttribute('data-state') === 'show' ? 'hide' : 'show');">
+                        <div class="btn-group btn-group-xs edit-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-primary" aria-label="edit text" onclick="console.log('Edit');">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" aria-label="move text" onclick="console.log('Move');">
+                                <span class="glyphicon glyphicon-move" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" aria-label="delete text" onclick="console.log('Delete');">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        Nullam elementum, massa id semper elementum, ipsum velit porttitor mi, in sodales dui enim eu metus. Sed aliquet nibh at est imperdiet ullamcorper. Aliquam accumsan venenatis nibh, id rhoncus magna. Cras mattis finibus orci, at fringilla nisi pellentesque tincidunt. Nunc eleifend, tellus sed ornare vestibulum, neque felis vulputate sapien, et interdum leo lorem et justo. Aenean ac purus at nibh feugiat vestibulum et nec velit. Praesent tempor fermentum mauris ut aliquet. Curabitur eu dapibus mi, vitae imperdiet nulla. Sed porta ex sem, at aliquam nibh lacinia eget. Quisque vestibulum aliquet ligula, vitae egestas tortor vehicula at. Maecenas sed ornare justo. Etiam molestie luctus porttitor. Phasellus congue nibh a rhoncus porta.</a>
+
+                    <a class="editable" id="para3" onclick="this.setAttribute('data-state', this.getAttribute('data-state') === 'show' ? 'hide' : 'show');">
+                        <div class="btn-group btn-group-xs edit-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-primary" aria-label="edit text" onclick="console.log('Edit');">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" aria-label="move text" onclick="console.log('Move');">
+                                <span class="glyphicon glyphicon-move" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" aria-label="delete text" onclick="console.log('Delete');">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        Aenean dictum feugiat vulputate. Pellentesque nec venenatis ante, at commodo tortor. Morbi ullamcorper vel odio vitae varius. Aenean porta lectus ut egestas maximus. Nam velit diam, rhoncus sed facilisis in, aliquam non neque. Proin orci neque, fringilla ut mattis vel, sagittis nec purus. Nulla in rutrum odio. Praesent volutpat nibh sit amet sapien volutpat egestas.</a>
+
+                    <a class="editable" id="para4" onclick="this.setAttribute('data-state', this.getAttribute('data-state') === 'show' ? 'hide' : 'show');">
+                        <div class="btn-group btn-group-xs edit-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-primary" aria-label="edit text" onclick="console.log('Edit');">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" aria-label="move text" onclick="console.log('Move');">
+                                <span class="glyphicon glyphicon-move" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" aria-label="delete text" onclick="console.log('Delete');">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        Proin accumsan felis diam, ac porta erat feugiat nec. Suspendisse vel dolor non felis gravida tincidunt in nec velit. Pellentesque iaculis felis tellus, id finibus dui suscipit id. Phasellus massa arcu, tincidunt quis faucibus eu, feugiat eget quam. Cras mauris erat, suscipit sed aliquet quis, aliquam pretium mauris. Quisque pulvinar bibendum erat, ultrices mattis ante vestibulum hendrerit. Nullam quis varius elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta velit sed lectus blandit fermentum. Maecenas eu ex a eros tincidunt ultricies at non quam.</a>
+
+                    <a class="editable" id="para5" onclick="this.setAttribute('data-state', this.getAttribute('data-state') === 'show' ? 'hide' : 'show');">
+                        <div class="btn-group btn-group-xs edit-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-primary" aria-label="edit text" onclick="console.log('Edit');">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" aria-label="move text" onclick="console.log('Move');">
+                                <span class="glyphicon glyphicon-move" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" aria-label="delete text" onclick="console.log('Delete');">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        Phasellus semper, lorem at pretium malesuada, odio magna luctus mi, semper porta ante nisl non augue. Etiam velit augue, sodales id aliquet ut, ultricies maximus augue. Nullam egestas a magna nec interdum. Nulla eu bibendum massa, vitae bibendum ligula. Duis ultrices commodo nunc non vehicula. Vestibulum sit amet orci a dolor egestas tempor. Nulla a bibendum ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent porta nulla in arcu sodales, sed vehicula nisi pellentesque. Donec orci leo, pellentesque id vulputate in, posuere vel nulla. Nam sit amet odio quis mi iaculis iaculis quis accumsan est. Sed ornare, eros a consectetur pulvinar, tellus mi maximus leo, in vulputate ex diam nec tellus. Aliquam condimentum, augue eu dapibus aliquam, lectus nulla rutrum metus, eget aliquam neque nunc at neque. Suspendisse vitae leo a sapien dignissim ultricies. Morbi facilisis efficitur eleifend. Praesent feugiat blandit ligula.</a>
+
+                    <h2 id="section2">Section 2</h2>
+                    <a class="editable">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget felis metus. Donec at ornare ex, eget scelerisque lorem. Praesent at ante non ante vestibulum ultricies ac a tellus. Praesent faucibus porttitor odio, eget dignissim sapien. Nunc sapien leo, posuere posuere nibh id, iaculis accumsan est. Sed quis lacus vitae velit imperdiet semper. Sed non luctus arcu.</a>
+
+                    <a class="editable">Nullam elementum, massa id semper elementum, ipsum velit porttitor mi, in sodales dui enim eu metus. Sed aliquet nibh at est imperdiet ullamcorper. Aliquam accumsan venenatis nibh, id rhoncus magna. Cras mattis finibus orci, at fringilla nisi pellentesque tincidunt. Nunc eleifend, tellus sed ornare vestibulum, neque felis vulputate sapien, et interdum leo lorem et justo. Aenean ac purus at nibh feugiat vestibulum et nec velit. Praesent tempor fermentum mauris ut aliquet. Curabitur eu dapibus mi, vitae imperdiet nulla. Sed porta ex sem, at aliquam nibh lacinia eget. Quisque vestibulum aliquet ligula, vitae egestas tortor vehicula at. Maecenas sed ornare justo. Etiam molestie luctus porttitor. Phasellus congue nibh a rhoncus porta.</a>
+
+                    <a class="editable">Aenean dictum feugiat vulputate. Pellentesque nec venenatis ante, at commodo tortor. Morbi ullamcorper vel odio vitae varius. Aenean porta lectus ut egestas maximus. Nam velit diam, rhoncus sed facilisis in, aliquam non neque. Proin orci neque, fringilla ut mattis vel, sagittis nec purus. Nulla in rutrum odio. Praesent volutpat nibh sit amet sapien volutpat egestas.</a>
+
+                    <h2 id="section3">Section 3</h2>
+                    <a class="editable">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget felis metus. Donec at ornare ex, eget scelerisque lorem. Praesent at ante non ante vestibulum ultricies ac a tellus. Praesent faucibus porttitor odio, eget dignissim sapien. Nunc sapien leo, posuere posuere nibh id, iaculis accumsan est. Sed quis lacus vitae velit imperdiet semper. Sed non luctus arcu.</a>
+
+                    <a class="editable">Nullam elementum, massa id semper elementum, ipsum velit porttitor mi, in sodales dui enim eu metus. Sed aliquet nibh at est imperdiet ullamcorper. Aliquam accumsan venenatis nibh, id rhoncus magna. Cras mattis finibus orci, at fringilla nisi pellentesque tincidunt. Nunc eleifend, tellus sed ornare vestibulum, neque felis vulputate sapien, et interdum leo lorem et justo. Aenean ac purus at nibh feugiat vestibulum et nec velit. Praesent tempor fermentum mauris ut aliquet. Curabitur eu dapibus mi, vitae imperdiet nulla. Sed porta ex sem, at aliquam nibh lacinia eget. Quisque vestibulum aliquet ligula, vitae egestas tortor vehicula at. Maecenas sed ornare justo. Etiam molestie luctus porttitor. Phasellus congue nibh a rhoncus porta.</a>
+
+                    <a class="editable">Aenean dictum feugiat vulputate. Pellentesque nec venenatis ante, at commodo tortor. Morbi ullamcorper vel odio vitae varius. Aenean porta lectus ut egestas maximus. Nam velit diam, rhoncus sed facilisis in, aliquam non neque. Proin orci neque, fringilla ut mattis vel, sagittis nec purus. Nulla in rutrum odio. Praesent volutpat nibh sit amet sapien volutpat egestas.</a>
+
+                    <h2 id="section4">Section 4</h2>
+                    <a class="editable">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget felis metus. Donec at ornare ex, eget scelerisque lorem. Praesent at ante non ante vestibulum ultricies ac a tellus. Praesent faucibus porttitor odio, eget dignissim sapien. Nunc sapien leo, posuere posuere nibh id, iaculis accumsan est. Sed quis lacus vitae velit imperdiet semper. Sed non luctus arcu.</a>
+
+                    <a class="editable">Nullam elementum, massa id semper elementum, ipsum velit porttitor mi, in sodales dui enim eu metus. Sed aliquet nibh at est imperdiet ullamcorper. Aliquam accumsan venenatis nibh, id rhoncus magna. Cras mattis finibus orci, at fringilla nisi pellentesque tincidunt. Nunc eleifend, tellus sed ornare vestibulum, neque felis vulputate sapien, et interdum leo lorem et justo. Aenean ac purus at nibh feugiat vestibulum et nec velit. Praesent tempor fermentum mauris ut aliquet. Curabitur eu dapibus mi, vitae imperdiet nulla. Sed porta ex sem, at aliquam nibh lacinia eget. Quisque vestibulum aliquet ligula, vitae egestas tortor vehicula at. Maecenas sed ornare justo. Etiam molestie luctus porttitor. Phasellus congue nibh a rhoncus porta.</a>
+
+                    <a class="editable">Aenean dictum feugiat vulputate. Pellentesque nec venenatis ante, at commodo tortor. Morbi ullamcorper vel odio vitae varius. Aenean porta lectus ut egestas maximus. Nam velit diam, rhoncus sed facilisis in, aliquam non neque. Proin orci neque, fringilla ut mattis vel, sagittis nec purus. Nulla in rutrum odio. Praesent volutpat nibh sit amet sapien volutpat egestas.</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="dist/assets/js/scrollspy.js"></script>
+        <script src="dist/assets/js/bundle.js"></script>
+    </body>
+</html>

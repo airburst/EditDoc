@@ -1,0 +1,50 @@
+$doc-container-bg: white;
+$doc-container-width: 75%;
+$nav-panel-bg: white;
+$nav-panel-width: 25%;
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0px;
+}
+
+.flexbox-container {    
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+}
+
+.nav-pane, .doc-pane {
+    position: relative;
+}
+
+.nav-pane {
+    margin-right: 20px;
+    width: $nav-panel-width;
+    background-color: $nav-panel-bg;
+}
+
+.doc-pane {
+    width: $doc-container-width;
+    background-color: $doc-container-bg;
+}
+
+.panel-content {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.nav-pane > .panel-content {
+    padding: 20px;
+}
+
+.doc-pane > .panel-content {
+    padding: 10px 60px;
+}

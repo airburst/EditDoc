@@ -1,0 +1,119 @@
+a.editable {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #222;
+  padding: 5px;
+  margin: 0 0 5px -5px;
+  border: 1px solid transparent; }
+
+a.editable:hover, a.editable[data-state=show] {
+  text-decoration: none;
+  color: #222;
+  border: 1px solid #2e6da4;
+  background-color: #eff5fb; }
+
+.edit-group {
+  position: absolute;
+  top: -22px;
+  right: -1px;
+  visibility: hidden; }
+
+.edit-group > button {
+  border-bottom: 0 !important;
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important; }
+
+a.editable:hover > .edit-group,
+a.editable[data-state=show] > .edit-group {
+  visibility: visible; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0px; }
+
+.flexbox-container {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%; }
+
+.nav-pane, .doc-pane {
+  position: relative; }
+
+.nav-pane {
+  margin-right: 20px;
+  width: 25%;
+  background-color: white; }
+
+.doc-pane {
+  width: 75%;
+  background-color: white; }
+
+.panel-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto; }
+
+.nav-pane > .panel-content {
+  padding: 20px; }
+
+.doc-pane > .panel-content {
+  padding: 10px 60px; }
+
+/* sidebar */
+.bs-docs-sidebar {
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+/* all links */
+.bs-docs-sidebar .nav > li > a {
+  color: #2e6da4;
+  border-left: 2px solid transparent;
+  padding: 4px 20px;
+  font-size: 1.2em;
+  font-weight: 400; }
+
+/* nested links */
+.bs-docs-sidebar .nav .nav > li > a {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  font-size: 1.1em; }
+
+/* active & hover links */
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > li > a:hover,
+.bs-docs-sidebar .nav > li > a:focus {
+  color: red;
+  text-decoration: none;
+  background-color: transparent;
+  border-left-color: red; }
+
+/* all active links */
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+  font-weight: 700; }
+
+/* nested active links */
+.bs-docs-sidebar .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav > .active:focus > a {
+  font-weight: 500; }
+
+/* hide inactive nested list */
+.bs-docs-sidebar .nav ul.nav {
+  display: none; }
+
+/* show active nested list */
+.bs-docs-sidebar .nav > .active > ul.nav {
+  display: block; }

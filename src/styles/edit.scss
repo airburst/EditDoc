@@ -1,0 +1,39 @@
+$edit-border-color: #2e6da4;
+$edit-background-color: #eff5fb;
+$text-color: #222;
+
+a.editable {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: $text-color;
+    padding: 5px;
+    margin: 0 0 5px -5px;
+    border: 1px solid transparent;
+}
+
+a.editable:hover, a.editable[data-state=show] {
+    text-decoration: none;
+    color: $text-color;
+    border: 1px solid $edit-border-color;
+    background-color: $edit-background-color;
+}
+
+.edit-group {
+    position: absolute;
+    top: -22px;
+    right: -1px;
+    visibility: hidden;
+}
+
+.edit-group > button {
+    border-bottom: 0 !important;
+    border-radius:         0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius:    0px !important;
+}
+
+a.editable:hover > .edit-group,
+a.editable[data-state=show] > .edit-group {
+    visibility: visible;
+}
