@@ -28,10 +28,10 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "index-static.html",
 			"settings":
 			{
-				"buffer_size": 16420,
+				"buffer_size": 16421,
 				"line_ending": "Windows"
 			}
 		},
@@ -39,23 +39,23 @@
 			"file": "src/js/app.js",
 			"settings":
 			{
-				"buffer_size": 1128,
+				"buffer_size": 211,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/styles/edit.scss",
+			"file": "src/js/components/doc-container.jsx",
 			"settings":
 			{
-				"buffer_size": 1252,
+				"buffer_size": 1817,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/styles/layout.scss",
+			"file": "src/js/components/doc.jsx",
 			"settings":
 			{
-				"buffer_size": 938,
+				"buffer_size": 1123,
 				"line_ending": "Windows"
 			}
 		}
@@ -146,21 +146,38 @@
 	"expanded_folders":
 	[
 		"/E/Data/Mark/Projects/EditDoc",
+		"/E/Data/Mark/Projects/EditDoc/dist/assets/css",
 		"/E/Data/Mark/Projects/EditDoc/src",
 		"/E/Data/Mark/Projects/EditDoc/src/js",
-		"/E/Data/Mark/Projects/EditDoc/src/styles"
+		"/E/Data/Mark/Projects/EditDoc/src/js/components",
+		"/E/Data/Mark/Projects/EditDoc/src/js/data"
 	],
 	"file_history":
 	[
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/edit-buttons.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/data/doc-data.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/navpane.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/doc-container.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/app.js",
+		"/E/Data/Mark/Projects/EditDoc/index.html",
+		"/E/Data/Mark/Projects/EditDoc/src/js/data/docData.jsx",
+		"/E/Data/Mark/Projects/EditDoc/index-static.html",
 		"/E/Data/Mark/Projects/EditDoc/gulpfile.js",
-		"/E/Data/Mark/Projects/EditDoc/node_modules/medium-editor/dist/js/medium-editor.js",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/heading.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/content.jsx",
+		"/E/Data/Mark/Projects/EditDoc/index.static.html",
+		"/E/Data/Mark/Projects/EditDoc/src/styles/layout.scss",
 		"/E/Data/Mark/Projects/EditDoc/src/styles/edit.scss",
+		"/E/Data/Mark/Projects/Checklists/index.html",
+		"/E/Data/Mark/Projects/Checklists/dist/css/material.min.css",
+		"/E/Data/Mark/Projects/Checklists/dist/js/material.min.js",
+		"/E/Data/Mark/Projects/Checklists/dist/js/jquery-1.10.2.min.js",
+		"/E/Data/Mark/Projects/Checklists/bootstrap-material-design-master/index.html",
+		"/E/Data/Mark/Projects/EditDoc/node_modules/medium-editor/dist/js/medium-editor.js",
 		"/E/Data/Mark/Projects/EditDoc/package.json",
 		"/E/Data/Mark/Projects/EditDoc/bower_components/pen/src/pen.js",
 		"/E/Data/Mark/Projects/EditDoc/dist/assets/js/pen.js",
 		"/E/Data/Mark/Projects/EditDoc/.gitignore",
-		"/E/Data/Mark/Projects/EditDoc/src/styles/layout.scss",
-		"/E/Data/Mark/Projects/EditDoc/src/js/app.js",
 		"/E/Data/Mark/Projects/Flexbox/flex.css",
 		"/E/Data/Mark/Projects/Flexbox/index.html",
 		"/E/Data/Mark/Dropbox/formbuilder/css/flex.css",
@@ -264,22 +281,7 @@
 		"/E/Data/Mark/Projects/osmaps/src/js/openspace-snippets.js",
 		"/E/Data/Mark/Projects/osmaps/src/js/components/open-file-component.js",
 		"/E/Data/Mark/Dropbox/Code/PHP/os/route.php",
-		"/C/Users/Mark/Downloads/bad.gpx",
-		"/E/Data/Mark/Projects/osmaps/src/js/map-functions-original.js",
-		"/C/Users/Mark/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/Mark/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
-		"/C/Users/Mark/AppData/Roaming/Sublime Text 3/Packages/DocBlockr/Base File.sublime-settings",
-		"/C/Users/Mark/Downloads/route (1).gpx",
-		"/C/Users/Mark/Downloads/route.gpx",
-		"/C/Users/Mark/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Mark/AppData/Roaming/Sublime Text 3/Installed Packages/Theme - Soda SolarizedDark.sublime-package",
-		"/E/Data/Mark/Projects/osmaps/dist/assets/css/main.min.css",
-		"/C/Users/Mark/AppData/Roaming/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
-		"/E/Data/Mark/Projects/osmaps/src/styles/shame.scss",
-		"/E/Data/Mark/Projects/osmaps/src/styles/main.scss",
-		"/E/Data/Mark/Dropbox/formbuilder/examples/BCC/General-Enquiry-TEST.htm",
-		"/E/Data/Mark/Dropbox/formbuilder/examples/BCC/BCC-AF-Enquiry-TEST.htm",
-		"/I/Software/ISO/Office/Office 2013/[www.Cpasbien.pe] Microsoft.Visio.Professional.2013.x64-iNDiSO/indiso.nfo"
+		"/C/Users/Mark/Downloads/bad.gpx"
 	],
 	"find":
 	{
@@ -299,6 +301,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"class=",
+			"class",
+			"div",
+			"product",
+			"Product",
+			"product",
+			"rows",
+			"type: 'para', text",
+			".row-action-primary i",
+			".list-group .list-group-item .row-picture i, .list-group .list-group-item .row-action-primary i",
+			"row-action",
 			"40",
 			" contenteditable=\"true\"",
 			", ",
@@ -415,18 +428,7 @@
 			"'",
 			"' +",
 			"section",
-			"toastr",
-			"$scope",
-			"toastr.error",
-			"_black",
-			"cssAssets",
-			"\"></script> ",
-			"<script src=\"",
-			"img",
-			"/node_modules",
-			"feedback",
-			"$modal-scroll-height",
-			" Bed"
+			"toastr"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -445,24 +447,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "index-static.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 16420,
+						"buffer_size": 16421,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								16165,
-								16165
+								3447,
+								3447
 							]
 						],
 						"settings":
@@ -472,10 +474,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3889.0,
+						"translation.y": 503.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -484,48 +486,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1128,
+						"buffer_size": 211,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								475,
-								475
+								208,
+								208
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/styles/edit.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1252,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -537,33 +511,59 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/styles/layout.scss",
+					"buffer": 2,
+					"file": "src/js/components/doc-container.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 938,
+						"buffer_size": 1817,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								71,
-								71
+								130,
+								130
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/js/components/doc.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1123,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								711,
+								711
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

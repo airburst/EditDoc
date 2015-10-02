@@ -1,36 +1,9 @@
-// Apply Scrollspy to side nav
-$('.doc-pane .panel-content').scrollspy({
-    target: '.bs-docs-sidebar',
-    offset: 40
-});
+import React from 'react';
+import DocContainer from './components/doc-container';
+import Data from './data/doc-data';
 
-// Apply Medium Editor to all content in doc pane
-var MediumEditor = require('medium-editor'),
-    elements = document.querySelectorAll('.editable p'),
-    editorOptions = {
-        buttonLabels: 'fontawesome',
-        toolbar: {
-            allowMultiParagraphSelection: true,
-            buttons: [
-                'bold',
-                'italic',
-                'underline',
-                'strikethrough','anchor',
-                'orderedlist',
-                'unorderedlist',
-                'indent',
-                'outdent'
-            ],
-            diffLeft: 0,
-            diffTop: -10,
-            firstButtonClass: 'medium-editor-button-first',
-            lastButtonClass: 'medium-editor-button-last',
-            standardizeSelectionStart: false,
-            static: false,
-            relativeContainer: null,
-            align: 'center',
-            sticky: false,
-            updateOnEmptySelection: false
-        }
-    },
-    editor = new MediumEditor(elements, editorOptions);
+main();
+
+function main() {
+    React.render(<DocContainer data={Data} />, document.body);
+}

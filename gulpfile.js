@@ -68,7 +68,11 @@ gulp.task('css', function() {
 
 gulp.task('scripts', function() {
     // Single entry point to browserify
-    return browserify({entries: 'src/js/app.js', extensions: ['.js'], debug: true})
+    return browserify({
+            entries: 'src/js/app.js',
+            extensions: ['.jsx'],
+            debug: true
+        })
         .transform(babelify)
         .bundle()
         .pipe(source('bundle.js'))
