@@ -18,9 +18,14 @@ var fs = require('fs'),
         host: 'localhost',
         port: '8000'
     },
-    jsAssets = ['node_modules/bootstrap/js/scrollspy.js'],
+    jsAssets = [
+        'node_modules/bootstrap/js/scrollspy.js'
+    ],
     cssAssets = [
         'node_modules/bootstrap/dist/css/bootstrap.css',
+        'node_modules/font-awesome/css/font-awesome.css',
+        'node_modules/medium-editor/dist/css/medium-editor.css',
+        'node_modules/medium-editor/dist/css/themes/beagle.css',
         'src/css/**/*.css'
     ],
     cleanFolders = [
@@ -72,6 +77,7 @@ gulp.task('scripts', function() {
 
 gulp.task('assets', function() {
     gulp.src(['node_modules/bootstrap/fonts/**/*.*']).pipe(gulp.dest('dist/assets/fonts'));
+    gulp.src(['node_modules/font-awesome/fonts/**/*.*']).pipe(gulp.dest('dist/assets/fonts'));
     gulp.src(['src/images/**/*.*']).pipe(gulp.dest('dist/assets/images'));
     gulp.src(jsAssets).pipe(gulp.dest('dist/assets/js'));
 });

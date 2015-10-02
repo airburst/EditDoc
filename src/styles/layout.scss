@@ -1,8 +1,9 @@
-$doc-container-bg: white;
-$doc-container-width: 75%;
 $nav-panel-bg: white;
 $nav-panel-width: 25%;
-
+$doc-container-bg: #e2e2e2;
+$doc-container-width: 75%;
+$doc-background: white;
+$doc-padding: 30px;
 
 html, body {
     height: 100%;
@@ -46,5 +47,11 @@ html, body {
 }
 
 .doc-pane > .panel-content {
-    padding: 10px 60px;
+    padding: 40px;
+}
+
+.doc {
+    background-color: $doc-background;
+    padding: $doc-padding;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }

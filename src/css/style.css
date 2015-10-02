@@ -7,27 +7,40 @@ a.editable {
   margin: 0 0 5px -5px;
   border: 1px solid transparent; }
 
-a.editable:hover, a.editable[data-state=show] {
-  text-decoration: none;
-  color: #222;
-  border: 1px solid #2e6da4;
-  background-color: #eff5fb; }
+a.editable > p {
+  margin-bottom: 0; }
 
+/* Hide button group by default */
 .edit-group {
   position: absolute;
   top: -22px;
   right: -1px;
   visibility: hidden; }
 
+/* Square edges on button group */
 .edit-group > button {
   border-bottom: 0 !important;
   border-radius: 0px !important;
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important; }
 
+/* Hover and 'show' state - background and border */
+a.editable:hover, a.editable[data-state=show] {
+  text-decoration: none;
+  color: #222;
+  border: 1px solid #2e6da4;
+  background-color: #eff5fb; }
+
+/* Hover and 'show' state - make button group visible */
 a.editable:hover > .edit-group,
 a.editable[data-state=show] > .edit-group {
   visibility: visible; }
+
+/* 
+Removed - 'show' state
+a.editable[data-state=show]                 (same as a.editable:hover)
+a.editable[data-state=show] > .edit-group   (a.editable:hover > .edit-group)
+*/
 
 html, body {
   height: 100%;
@@ -52,7 +65,7 @@ html, body {
 
 .doc-pane {
   width: 75%;
-  background-color: white; }
+  background-color: #e2e2e2; }
 
 .panel-content {
   position: absolute;
@@ -66,7 +79,12 @@ html, body {
   padding: 20px; }
 
 .doc-pane > .panel-content {
-  padding: 10px 60px; }
+  padding: 40px; }
+
+.doc {
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
 /* sidebar */
 .bs-docs-sidebar {

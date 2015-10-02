@@ -11,7 +11,8 @@
   "dependencies": {
     "bootstrap": "^3.3.5",
     "dragula": "^3.3.0",
-    "vinyl-source-stream": "^1.1.0"
+    "font-awesome": "^4.4.0",
+    "medium-editor": "^5.8.2"
   },
   "devDependencies": {
     "babelify": "^6.3.0",
@@ -29,6 +30,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.1",
     "gulp-uglify": "^1.2.0",
-    "gulp-webserver": "^0.9.1"
+    "gulp-webserver": "^0.9.1",
+    "resolve": "^1.1.6",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
