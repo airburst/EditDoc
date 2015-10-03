@@ -11,12 +11,12 @@ class DocContainer extends React.Component {
         return (
             <div className="content">
                 <div className="row">
-                    <Header />
+                    <Header settings={this.props.settings}/>
                 </div>
                 <div className="flexbox-container">
-                    <NavPane doc={this.props.data} />
+                    <NavPane doc={this.props.data} show={this.props.settings.showNav} />
                     <Doc doc={this.props.data} />
-                    <CommentPane />
+                    <CommentPane show={this.props.settings.showComments} />
                 </div>
             </div>
         );

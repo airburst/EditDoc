@@ -3,7 +3,7 @@ import React from 'react';
 class NavPane extends React.Component {
     render() {
         return (
-            <div className="sidepanel left">
+            <div className={this.props.show ? 'sidepanel left' : 'sidepanel left flex-hide'}>
                 <div className="panel-content">
                     <nav className="bs-docs-sidebar">
                         <ul className="nav nav-stacked fixed">

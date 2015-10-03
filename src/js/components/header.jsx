@@ -27,8 +27,18 @@ class Header extends React.Component {
                             <div className="navbar-spacer"></div>
                             <div className="navbar-buttons-right">
                                 <div className="btn-group">
-                                    <button id="show-nav-button" className="btn btn-default btn-toggle active" onclick="console.log('Toggle navigation');"><i className="fa fa-bars"></i> Navigation</button>
-                                    <button id="show-comments-button" className="btn btn-default btn-toggle" onclick="console.log('Toggle comments');"><i className="fa fa-comments"></i> Comments</button>
+                                    <button 
+                                        id="show-nav-button" 
+                                        className={this.props.settings.showNav ? 'btn btn-default btn-toggle active' : 'btn btn-default btn-toggle'}
+                                        onclick="console.log('Toggle navigation');">
+                                        <i className="fa fa-bars"></i> Navigation
+                                    </button>
+                                    <button 
+                                        id="show-comments-button" 
+                                        className={this.props.settings.showComments ? 'btn btn-default btn-toggle active' : 'btn btn-default btn-toggle'}
+                                        onclick="console.log('Toggle comments');">
+                                        <i className="fa fa-comments"></i> Comments
+                                    </button>
                                 </div>
                             </div>
                         </div>
