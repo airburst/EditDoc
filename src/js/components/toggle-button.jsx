@@ -9,9 +9,8 @@ let ToggleButton = React.createClass({
 
     render: function() {
         return (
-            <button 
-                id="show-nav-button" 
-                className={'btn btn-default btn-toggle' + (!this.state.active ? ' active' : '')}
+            <button
+                className={'btn btn-default btn-toggle' + (this.state.active ? ' active' : '')}
                 onClick={this.handleClick}>
                 <i className={'fa ' + this.props.icon}></i> {this.props.label}
             </button>
@@ -19,8 +18,9 @@ let ToggleButton = React.createClass({
     },
 
     handleClick: function(event) {
-        this.setState({active: !this.state.active});
-        this.props.update(this.props.setting, this.state.active);
+        let newState = !this.state.active;
+        this.setState({active: newState});
+        this.props.update(this.props.setting, newState);
     }
 
 });
