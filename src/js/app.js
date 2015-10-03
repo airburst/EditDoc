@@ -51,7 +51,6 @@ let DocContainer = React.createClass({
                 text: editable.innerHTML
             };
             self.setState({changes: self.state.changes.concat([change])});
-            console.log(self.state.changes.length);
         });
 
         // Apply Scrollspy to side nav

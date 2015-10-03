@@ -1,5 +1,6 @@
 import React from 'react';
 import ToggleButton from './toggle-button';
+import caret from '../utils/caret';
 
 let Header = React.createClass({
 
