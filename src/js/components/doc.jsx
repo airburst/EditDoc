@@ -2,8 +2,9 @@ import React from 'react';
 import Title from './title';
 import Para from './para';
 
-class Doc extends React.Component {
-    render() {
+let Doc = React.createClass({
+
+    render: function() {
 
         let sections = [];
         let count = 1;
@@ -29,6 +30,7 @@ class Doc extends React.Component {
             </div>
         );
     }
-}
+
+});
 
 export default Doc;

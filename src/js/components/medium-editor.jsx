@@ -1,12 +1,7 @@
-let StartMediumEditor = function() {
-    // Apply Scrollspy to side nav
-    $('.doc-pane .panel-content').scrollspy({
-        target: '.bs-docs-sidebar',
-        offset: 40
-    });
+let Editor = function() {
 
     // Apply Medium Editor to all content in doc pane
-    var MediumEditor = require('medium-editor'),
+    let MediumEditor = require('medium-editor'),
 
         elements = document.querySelectorAll('.editable p'),
 
@@ -41,6 +36,9 @@ let StartMediumEditor = function() {
         },
 
         editor = new MediumEditor(elements, editorOptions);
+
+    return editor;
+
 }
 
-export default StartMediumEditor;
+export default Editor;

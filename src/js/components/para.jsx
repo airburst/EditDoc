@@ -1,16 +1,22 @@
 import React from 'react';
 import EditButtons from './edit-buttons';
-import Uuid from '../utils/uuid';
+import GetCaretPosition from '../utils/get-caret-position';
 
-class Para extends React.Component {
-    render() {
+let Para = React.createClass({
+
+    getInitialState: function() {
+        return {text: this.props.text};
+    },
+
+    render: function() {
         return (
             <a className="editable">
                 <EditButtons />
-                <p id={this.props.id} key={this.props.id}>{this.props.text}</p>
+                <p id={this.props.id}>{this.state.text}</p>
             </a>
         );
     }
-}
+
+});
 
 export default Para;

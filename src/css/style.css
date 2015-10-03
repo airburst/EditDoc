@@ -155,10 +155,6 @@ html, body, .content {
 .panel-title-right {
   text-align: center; }
 
-/* Navbar */
-.navbar-padding {
-  padding: 0 10px; }
-
 /* sidebar */
 .bs-docs-sidebar {
   padding-left: 20px;
