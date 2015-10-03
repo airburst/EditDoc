@@ -28,34 +28,27 @@
 	"buffers":
 	[
 		{
-			"file": "index-static.html",
+			"file": "src/js/components/header.jsx",
 			"settings":
 			{
-				"buffer_size": 16421,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/app.js",
-			"settings":
-			{
-				"buffer_size": 211,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/components/doc-container.jsx",
-			"settings":
-			{
-				"buffer_size": 1817,
-				"line_ending": "Windows"
+				"buffer_size": 2379,
+				"line_ending": "Windows",
+				"name": "<div class=\"navbar navbar-inverse\">"
 			}
 		},
 		{
 			"file": "src/js/components/doc.jsx",
 			"settings":
 			{
-				"buffer_size": 1123,
+				"buffer_size": 936,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/styles/layout.scss",
+			"settings":
+			{
+				"buffer_size": 1622,
 				"line_ending": "Windows"
 			}
 		}
@@ -146,28 +139,45 @@
 	"expanded_folders":
 	[
 		"/E/Data/Mark/Projects/EditDoc",
-		"/E/Data/Mark/Projects/EditDoc/dist/assets/css",
+		"/E/Data/Mark/Projects/EditDoc/dist/assets",
+		"/E/Data/Mark/Projects/EditDoc/dist/assets/js",
+		"/E/Data/Mark/Projects/EditDoc/node_modules/bootstrap",
+		"/E/Data/Mark/Projects/EditDoc/node_modules/bootstrap/dist",
+		"/E/Data/Mark/Projects/EditDoc/node_modules/bootstrap/dist/js",
+		"/E/Data/Mark/Projects/EditDoc/node_modules/react-bootstrap",
 		"/E/Data/Mark/Projects/EditDoc/src",
 		"/E/Data/Mark/Projects/EditDoc/src/js",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components",
-		"/E/Data/Mark/Projects/EditDoc/src/js/data"
+		"/E/Data/Mark/Projects/EditDoc/src/js/data",
+		"/E/Data/Mark/Projects/EditDoc/src/js/utils",
+		"/E/Data/Mark/Projects/EditDoc/src/styles"
 	],
 	"file_history":
 	[
-		"/E/Data/Mark/Projects/EditDoc/src/js/components/edit-buttons.jsx",
-		"/E/Data/Mark/Projects/EditDoc/src/js/data/doc-data.jsx",
-		"/E/Data/Mark/Projects/EditDoc/src/js/components/navpane.jsx",
-		"/E/Data/Mark/Projects/EditDoc/src/js/components/doc-container.jsx",
-		"/E/Data/Mark/Projects/EditDoc/src/js/app.js",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/para.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/title.jsx",
 		"/E/Data/Mark/Projects/EditDoc/index.html",
-		"/E/Data/Mark/Projects/EditDoc/src/js/data/docData.jsx",
-		"/E/Data/Mark/Projects/EditDoc/index-static.html",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/doc-container.jsx",
 		"/E/Data/Mark/Projects/EditDoc/gulpfile.js",
+		"/E/Data/Mark/Projects/EditDoc/src/styles/nav.scss",
+		"/E/Data/Mark/Projects/EditDoc/src/styles/layout.scss",
+		"/E/Data/Mark/Dropbox/formbuilder/templates/header.html",
+		"/E/Data/Mark/Dropbox/formbuilder/css/flex.css",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/comment-pane.jsx",
+		"/E/Data/Mark/Projects/EditDoc/index-static.html",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/nav-pane.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/doc.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/data/doc-data.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/medium-editor.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/app.js",
+		"/E/Data/Mark/Projects/EditDoc/src/styles/edit.scss",
+		"/E/Data/Mark/Projects/EditDoc/src/js/utils/uuid.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/edit-buttons.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/navpane.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/data/docData.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/heading.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/content.jsx",
 		"/E/Data/Mark/Projects/EditDoc/index.static.html",
-		"/E/Data/Mark/Projects/EditDoc/src/styles/layout.scss",
-		"/E/Data/Mark/Projects/EditDoc/src/styles/edit.scss",
 		"/E/Data/Mark/Projects/Checklists/index.html",
 		"/E/Data/Mark/Projects/Checklists/dist/css/material.min.css",
 		"/E/Data/Mark/Projects/Checklists/dist/js/material.min.js",
@@ -180,7 +190,6 @@
 		"/E/Data/Mark/Projects/EditDoc/.gitignore",
 		"/E/Data/Mark/Projects/Flexbox/flex.css",
 		"/E/Data/Mark/Projects/Flexbox/index.html",
-		"/E/Data/Mark/Dropbox/formbuilder/css/flex.css",
 		"/E/Data/Mark/Projects/ExcelToJS/src/js/app.js",
 		"/E/Data/Mark/Projects/Material Maps/index.html",
 		"/C/Users/Mark/Desktop/ExcelToJS/index.html",
@@ -272,16 +281,7 @@
 		"/E/Data/Mark/Projects/osmaps/src/js/test.ts",
 		"/E/Data/Mark/Projects/osmaps/src/js/components/infopanel-component.js",
 		"/C/Users/Mark/Downloads/Start of Frocester Hill Route.gpx",
-		"/C/Users/Mark/AppData/Roaming/Adobe/Lightroom/Preferences/Lightroom 6 Preferences.agprefs",
-		"/E/Data/Mark/Projects/osmaps/route-format.gpx",
-		"/C/Users/Mark/Desktop/testApp/app/Http/Controllers/ContactsController.php",
-		"/C/Users/Mark/Desktop/testApp/app/Http/routes.php",
-		"/E/Data/Mark/Projects/osmaps/index.html",
-		"/C/Users/Mark/Desktop/index.php",
-		"/E/Data/Mark/Projects/osmaps/src/js/openspace-snippets.js",
-		"/E/Data/Mark/Projects/osmaps/src/js/components/open-file-component.js",
-		"/E/Data/Mark/Dropbox/Code/PHP/os/route.php",
-		"/C/Users/Mark/Downloads/bad.gpx"
+		"/C/Users/Mark/AppData/Roaming/Adobe/Lightroom/Preferences/Lightroom 6 Preferences.agprefs"
 	],
 	"find":
 	{
@@ -301,6 +301,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"class=",
+			"\">\n",
+			"class=",
+			"CommentPane",
+			".main",
+			"Nav",
+			"EditButtons",
 			"class=",
 			"class",
 			"div",
@@ -421,14 +428,7 @@
 			"self",
 			"this",
 			"AppCtrl",
-			"this",
-			": ",
-			",",
-			"v-",
-			"'",
-			"' +",
-			"section",
-			"toastr"
+			"this"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -452,49 +452,50 @@
 			[
 				{
 					"buffer": 0,
-					"file": "index-static.html",
+					"file": "src/js/components/header.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 16421,
+						"buffer_size": 2379,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3447,
-								3447
+								27,
+								27
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"auto_name": "<div class=\"navbar navbar-inverse\">",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 503.0,
+						"translation.x": -0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/js/app.js",
+					"file": "src/js/components/doc.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 211,
+						"buffer_size": 936,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								208,
-								208
+								876,
+								876
 							]
 						],
 						"settings":
@@ -512,58 +513,32 @@
 				},
 				{
 					"buffer": 2,
-					"file": "src/js/components/doc-container.jsx",
+					"file": "src/styles/layout.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1817,
+						"buffer_size": 1622,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								130,
-								130
+								107,
+								107
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/js/components/doc.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1123,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								711,
-								711
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]

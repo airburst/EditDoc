@@ -19,7 +19,7 @@ var fs = require('fs'),
         port: '8000'
     },
     jsAssets = [
-        'node_modules/bootstrap/js/scrollspy.js'
+        'node_modules/bootstrap/dist/js/bootstrap.min.js'
     ],
     cssAssets = [
         'node_modules/bootstrap/dist/css/bootstrap.css',
@@ -96,6 +96,9 @@ gulp.task('watch', function() {
 
     // Watch .js files
     gulp.watch('src/js/**/*.js', ['scripts', 'notify']);
+
+    // Watch .jsx files
+    gulp.watch('src/js/**/*.jsx', ['scripts', 'notify']);
 });
 
 gulp.task('default', ['clean', 'assets', 'sass', 'css', 'scripts', 'webserver', 'watch']);

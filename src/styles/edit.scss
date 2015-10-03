@@ -32,22 +32,18 @@ a.editable > p {
     -moz-border-radius:    0px !important;
 }
 
-/* Hover and 'show' state - background and border */
+/* Hover and 'show' state - background and border 
 a.editable:hover, a.editable[data-state=show] {
     text-decoration: none;
     color: $text-color;
     border: 1px solid $edit-border-color;
     background-color: $edit-background-color;
 }
+*/
 
-/* Hover and 'show' state - make button group visible */
+/* Hover and 'show' state - make button group visible 
 a.editable:hover > .edit-group,
 a.editable[data-state=show] > .edit-group {
     visibility: visible;
 }
-
-/* 
-Removed - 'show' state
-a.editable[data-state=show]                 (same as a.editable:hover)
-a.editable[data-state=show] > .edit-group   (a.editable:hover > .edit-group)
 */

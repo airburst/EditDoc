@@ -1,28 +1,25 @@
 import React from 'react';
-import EditButtons from './edit-buttons';
+import Title from './title';
+import Para from './para';
 
 class Doc extends React.Component {
     render() {
 
-        var sections = [];
+        let sections = [];
+        let count = 1;
         this.props.doc.content.forEach(function(item) {
             switch(item.type) {
                 case 'title':
-                    sections.push(<h2>{item.text}</h2>);
+                    sections.push(<Title id={count++} text={item.text} />);
                     break;
-                case 'para':
-                    sections.push(
-                        <a className="editable" onclick="this.setAttribute('data-state', this.getAttribute('data-state') === 'show' ? 'hide' : 'show');">
-                            <EditButtons />
-                            <p>{item.text}</p>
-                        </a>
-                    );
+                case 'para':                
+                    sections.push(<Para id={count++} text={item.text} />);
                     break;
             }
         });
 
         return (
-            <div className="doc-pane">
+            <div className="centre">
                 <div className="panel-content">
                     <div className="doc">
                         <h1 id="title">{this.props.doc.title}</h1>
