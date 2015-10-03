@@ -1,23 +1,29 @@
 import React from 'react';
 import EditButtons from './edit-buttons';
-import Uuid from '../utils/uuid';
 
-class ToggleButton extends React.Component {
+let ToggleButton = React.createClass({
 
-    handleClick() {
-        
-    }
+    getInitialState: function() {
+        return {active: this.props.active};
+    },
 
-    render() {
+    render: function() {
         return (
             <button 
                 id="show-nav-button" 
-                className={this.props.show ? 'btn btn-default btn-toggle active' : 'btn btn-default btn-toggle'}
-                onclick="console.log('Toggle navigation');">
-                <i className="fa fa-bars"></i> Navigation
+                className={'btn btn-default btn-toggle' + (this.state.active ? ' active' : '')}
+                onClick={this.handleClick}>
+                <i className={'fa ' + this.props.icon}></i> {this.props.label}
             </button>
         );
+    },
+
+    handleClick: function(event) {
+        console.log('calling update with ' + this.props.setting + '=' + this.state.active);
+        this.setState({active: !this.state.active});
+        this.props.update(this.props.setting, this.state.active);
     }
-}
+
+});
 
 export default ToggleButton;

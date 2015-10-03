@@ -1,7 +1,9 @@
 import React from 'react';
+import ToggleButton from './toggle-button';
 
-class Header extends React.Component {
-    render() {
+let Header = React.createClass({
+
+    render: function() {
         return (
             <header>
                 <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -27,18 +29,8 @@ class Header extends React.Component {
                             <div className="navbar-spacer"></div>
                             <div className="navbar-buttons-right">
                                 <div className="btn-group">
-                                    <button 
-                                        id="show-nav-button" 
-                                        className={this.props.settings.showNav ? 'btn btn-default btn-toggle active' : 'btn btn-default btn-toggle'}
-                                        onclick="console.log('Toggle navigation');">
-                                        <i className="fa fa-bars"></i> Navigation
-                                    </button>
-                                    <button 
-                                        id="show-comments-button" 
-                                        className={this.props.settings.showComments ? 'btn btn-default btn-toggle active' : 'btn btn-default btn-toggle'}
-                                        onclick="console.log('Toggle comments');">
-                                        <i className="fa fa-comments"></i> Comments
-                                    </button>
+                                    <ToggleButton active={true} label={'Navigation'} icon={'fa-bars'} setting={'showNav'} update={this.props.update} />
+                                    <ToggleButton active={false} label={'Comments'} icon={'fa-comments'} setting={'showComments'} update={this.props.update}/>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +39,12 @@ class Header extends React.Component {
                 </nav>
             </header>
         );
+    },
+
+    update: function(key, value) {
+        this.props.update(key, value);
     }
-}
+
+});
 
 export default Header;
