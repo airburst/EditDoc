@@ -179,7 +179,15 @@
 			"file": "src/js/app.js",
 			"settings":
 			{
-				"buffer_size": 2000,
+				"buffer_size": 1717,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/components/doc.jsx",
+			"settings":
+			{
+				"buffer_size": 1004,
 				"line_ending": "Windows"
 			}
 		},
@@ -187,15 +195,7 @@
 			"file": "src/js/components/para.jsx",
 			"settings":
 			{
-				"buffer_size": 633,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/components/header.jsx",
-			"settings":
-			{
-				"buffer_size": 2450,
+				"buffer_size": 1298,
 				"line_ending": "Windows"
 			}
 		}
@@ -289,6 +289,7 @@
 	},
 	"file_history":
 	[
+		"/C/Dev/EditDoc/src/js/components/header.jsx",
 		"/C/Dev/EditDoc/src/js/utils/caret.jsx",
 		"/C/Dev/EditDoc/src/js/components/para.jsx",
 		"/C/Dev/EditDoc/src/js/components/medium-editor.jsx",
@@ -301,7 +302,6 @@
 		"/C/Dev/EditDoc/src/styles/nav.scss",
 		"/C/Dev/EditDoc/src/js/components/toggle-button.jsx",
 		"/C/Dev/EditDoc/src/js/app.js",
-		"/C/Dev/EditDoc/src/js/components/header.jsx",
 		"/C/Dev/EditDoc/index.html",
 		"/C/Dev/EditDoc/src/styles/edit.scss",
 		"/C/Dev/EditDoc/gulpfile.js",
@@ -451,6 +451,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"blur",
+			"this.props",
 			"this",
 			"properties",
 			"!this.state.active",
@@ -576,9 +578,7 @@
 			"filterBrma",
 			"cssHeader",
 			"\"",
-			"filterBrma",
-			"\"",
-			"initRulesTable"
+			"filterBrma"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -612,7 +612,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -621,15 +621,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2000,
+						"buffer_size": 1717,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1515,
-								1455
+								950,
+								950
 							]
 						],
 						"settings":
@@ -638,28 +638,58 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 712.0,
+						"translation.x": 0.0,
+						"translation.y": 379.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/js/components/doc.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								632,
+								632
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 10.0,
+						"translation.y": 50.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "src/js/components/para.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 633,
+						"buffer_size": 1298,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								90,
-								90
+								684,
+								684
 							]
 						],
 						"settings":
@@ -669,40 +699,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 301.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/js/components/header.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2450,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								106,
-								71
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]

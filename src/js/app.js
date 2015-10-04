@@ -24,7 +24,7 @@ let DocContainer = React.createClass({
                 </div>
                 <div className="flexbox-container">
                     <NavPane doc={this.props.data} show={this.state.settings.showNav} />
-                    <Doc doc={this.props.data} changes={this.state.changes} />
+                    <Doc doc={this.props.data} changed={this.addChange} />
                     <CommentPane show={this.state.settings.showComments} />
                 </div>
             </div>
@@ -36,22 +36,14 @@ let DocContainer = React.createClass({
         this.setState({settings: AppSettings});
     },
 
+    addChange: function(change) {
+        self.setState({changes: self.state.changes.concat([change])});
+        console.log(self.state.changes.length);
+    },
+
     componentDidMount: function() {
         let editor = Editor()
             self = this;
-
-        // Setup listener for changes to document
-        editor.subscribe('editableInput', function (event, editable) {
-            event.preventDefault();
-            event.stopPropagation();
-
-            // Create change object
-            let change = {
-                id:   event.target.id,
-                text: editable.innerHTML
-            };
-            self.setState({changes: self.state.changes.concat([change])});
-        });
 
         // Apply Scrollspy to side nav
         $('.doc').scrollspy({
@@ -62,4 +54,4 @@ let DocContainer = React.createClass({
 
 });
 
-React.render(<DocContainer data={Data} settings={AppSettings}/>, document.body);
+React.render(<DocContainer data={Data} settings={AppSettings} />, document.body);

@@ -12,7 +12,12 @@ let Para = React.createClass({
         return (
             <a className="editable">
                 <EditButtons />
-                <p id={this.props.id} onClick={this.clicked}>{this.state.text}</p>
+                <p 
+                    id={this.props.id} 
+                    onClick={this.clicked} 
+                    onBlur={this.checkChanges}>
+                    {this.state.text}
+                </p>
             </a>
         );
     },
@@ -20,7 +25,26 @@ let Para = React.createClass({
     clicked: function(event) {
         event.preventDefault();
         event.stopPropagation();
-        console.log(caret.getPosition(event.target));
+        //console.log(caret.getPosition(event.target));
+    },
+
+    checkChanges: function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        let newText = event.target.innerText.trim();
+        if (newText !== this.state.text) {
+            // Set text state
+            this.setState({text: newText});
+
+            // Create change object
+            let change = {
+                id:   event.target.id,
+                text: newText
+            };
+            // Broadcast the change up to changes object
+            this.props.changed(change);
+        }
     }
 
 });

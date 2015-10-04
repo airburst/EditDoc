@@ -8,13 +8,15 @@ let Doc = React.createClass({
 
         let sections = [];
         let count = 1;
+        let changed = this.props.changed;
+
         this.props.doc.content.forEach(function(item) {
             switch(item.type) {
                 case 'title':
                     sections.push(<Title id={count++} text={item.text} />);
                     break;
                 case 'para':                
-                    sections.push(<Para id={count++} text={item.text} />);
+                    sections.push(<Para id={count++} text={item.text} changed={changed}/>);
                     break;
             }
         });
