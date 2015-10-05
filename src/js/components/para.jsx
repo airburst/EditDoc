@@ -34,14 +34,16 @@ let Para = React.createClass({
 
         let newText = event.target.innerText.trim();
         if (newText !== this.state.text) {
-            // Set text state
-            this.setState({text: newText});
-
             // Create change object
             let change = {
                 id:   event.target.id,
-                text: newText
+                oldValue: this.state.text,
+                newValue: newText
             };
+
+            // Set text state
+            this.setState({text: newText});
+
             // Broadcast the change up to changes object
             this.props.changed(change);
         }

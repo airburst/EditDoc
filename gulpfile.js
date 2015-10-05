@@ -7,7 +7,7 @@ var fs = require('fs'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
-    cache = require('gulp-cache'),
+    streamify = require('gulp-streamify'),
     livereload = require('gulp-livereload'),
     del = require('del'),
     browserify = require('browserify'),
@@ -76,6 +76,7 @@ gulp.task('scripts', function() {
         .transform(babelify)
         .bundle()
         .pipe(source('bundle.js'))
+        .pipe(streamify(uglify()))
         .pipe(gulp.dest('dist/assets/js'));
 });
 
