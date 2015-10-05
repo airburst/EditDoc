@@ -1,6 +1,7 @@
 import React from 'react';
 import EditButtons from './edit-buttons';
 import caret from '../utils/caret';
+import diff from '../utils/diff';
 
 let Para = React.createClass({
 
@@ -40,6 +41,9 @@ let Para = React.createClass({
                 oldValue: this.state.text,
                 newValue: newText
             };
+
+            // Diff
+            console.log(diff.compare(this.state.text, newText));
 
             // Set text state
             this.setState({text: newText});

@@ -39,8 +39,17 @@
 			"file": "src/js/components/para.jsx",
 			"settings":
 			{
-				"buffer_size": 1346,
+				"buffer_size": 1466,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/utils/diff.jsx",
+			"settings":
+			{
+				"buffer_size": 720,
+				"line_ending": "Windows",
+				"name": "let jsDiff = require('diff');"
 			}
 		}
 	],
@@ -139,6 +148,8 @@
 	],
 	"file_history":
 	[
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/medium-editor.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/title.jsx",
 		"/E/Data/Mark/Projects/EditDoc/gulpfile.js",
 		"/E/Data/Mark/Projects/EditDoc/dist/assets/js/bundle.js",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/header.jsx",
@@ -152,14 +163,12 @@
 		"/E/Data/Mark/Projects/EditDoc/src/js/data/app-settings.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/styles/layout.scss",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/para.jsx",
-		"/E/Data/Mark/Projects/EditDoc/src/js/components/title.jsx",
 		"/E/Data/Mark/Projects/EditDoc/index.html",
 		"/E/Data/Mark/Projects/EditDoc/src/styles/nav.scss",
 		"/E/Data/Mark/Dropbox/formbuilder/templates/header.html",
 		"/E/Data/Mark/Dropbox/formbuilder/css/flex.css",
 		"/E/Data/Mark/Projects/EditDoc/index-static.html",
 		"/E/Data/Mark/Projects/EditDoc/src/js/data/doc-data.jsx",
-		"/E/Data/Mark/Projects/EditDoc/src/js/components/medium-editor.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/styles/edit.scss",
 		"/E/Data/Mark/Projects/EditDoc/src/js/utils/uuid.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/edit-buttons.jsx",
@@ -277,6 +286,7 @@
 		"height": 102.0,
 		"where_history":
 		[
+			"E:\\Data\\Mark\\Projects\\EditDoc\\src\\js",
 			"E:\\Data\\Mark\\Projects\\Material Maps\\src\\js",
 			""
 		]
@@ -286,6 +296,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"added",
+			"color",
+			"require",
 			"cache",
 			"key",
 			"components",
@@ -410,10 +423,7 @@
 			"showSearchResults",
 			"User",
 			"user",
-			"resultsDialog",
-			"drawProfile",
-			"$scope.drawProfile();",
-			"self"
+			"resultsDialog"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -432,7 +442,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -460,7 +470,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -469,15 +479,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1346,
+						"buffer_size": 1466,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1130,
-								1130
+								1184,
+								1184
 							]
 						],
 						"settings":
@@ -487,7 +497,36 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": -0.0,
-						"translation.y": 287.0,
+						"translation.y": 336.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/js/utils/diff.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 720,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								647,
+								647
+							]
+						],
+						"settings":
+						{
+							"auto_name": "let jsDiff = require('diff');",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

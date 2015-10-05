@@ -1,9 +1,7 @@
+let MediumEditor = require('medium-editor');
+
 let Editor = function() {
-
-    // Apply Medium Editor to all content in doc pane
-    let MediumEditor = require('medium-editor'),
-
-        elements = document.querySelectorAll('.editable p'),
+    let elements = document.querySelectorAll('.editable p'),
 
         editorOptions = {
             buttonLabels: 'fontawesome',

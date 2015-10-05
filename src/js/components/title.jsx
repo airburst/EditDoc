@@ -1,5 +1,4 @@
 import React from 'react';
-import Uuid from '../utils/uuid';
 
 class Title extends React.Component {
     render() {
