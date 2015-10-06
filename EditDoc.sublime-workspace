@@ -149,6 +149,7 @@
 	"file_history":
 	[
 		"/E/Data/Mark/Projects/EditDoc/package.json",
+		"/C/Program Files/nodejs/node_modules/npm/node_modules/node-gyp/lib/configure.js",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/medium-editor.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/title.jsx",
 		"/E/Data/Mark/Projects/EditDoc/gulpfile.js",
@@ -274,8 +275,7 @@
 		"/E/xampp/htdocs/osmaps/src/styles/layout.scss",
 		"/C/Users/Mark/Desktop/angularMaterial/src/app.js",
 		"/E/xampp/laravel/postcodes/gulpfile.js",
-		"/E/Data/Mark/Projects/angularMaps/package.json",
-		"/E/Data/Mark/Projects/angularMaps/gulpfile.js"
+		"/E/Data/Mark/Projects/angularMaps/package.json"
 	],
 	"find":
 	{

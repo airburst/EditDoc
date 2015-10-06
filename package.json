@@ -4,7 +4,7 @@
   "description": "Edit Document",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine-node-karma spec/"
   },
   "author": "Mark Fairhurst",
   "license": "MIT",
