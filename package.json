@@ -4,7 +4,7 @@
   "description": "Edit Document",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine-node-karma spec/"
+    "test": "jasmine spec/immutable.spec.js"
   },
   "author": "Mark Fairhurst",
   "license": "MIT",
@@ -34,6 +34,10 @@
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^1.2.0",
     "gulp-webserver": "^0.9.1",
+    "jasmine-core": "^2.3.4",
+    "jasmine-es6": "0.0.18",
+    "jasmine-immutable-matchers": "^0.1.0",
+    "karma-babel-preprocessor": "^5.2.2",
     "react-hot-loader": "^1.3.0",
     "resolve": "^1.1.6",
     "vinyl-source-stream": "^1.1.0"

@@ -1,4 +1,5 @@
 import React from 'react';
+import Immutable from 'immutable';
 import Header from './components/header';
 import NavPane from './components/nav-pane';
 import Doc from './components/doc';
@@ -6,6 +7,10 @@ import CommentPane from './components/comment-pane';
 import Editor from './components/medium-editor';
 import Data from './data/doc-data';
 import AppSettings from './data/app-settings';
+
+let settings = Immutable.Map(AppSettings);
+console.log(settings);
+//let appState = Immutable.Map();
 
 let DocContainer = React.createClass({
 
