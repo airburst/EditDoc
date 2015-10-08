@@ -25,8 +25,11 @@ let Doc = React.createClass({
             <div className="centre">
                 <div className="panel-content">
                     <div className="doc">
-                        <h1 id="title">{this.props.doc.title}</h1>
-                        {sections}
+                        <div className="contents">
+                            <h1 id="title">{this.props.doc.title}</h1>
+                            {sections}
+                        </div>
+                        <div className="comments"></div>
                     </div>
                 </div>
             </div>
