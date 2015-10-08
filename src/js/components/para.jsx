@@ -26,7 +26,9 @@ let Para = React.createClass({
     clicked: function(event) {
         event.preventDefault();
         event.stopPropagation();
-        //console.log(caret.getPosition(event.target));
+
+        console.log('top = ' + this.top());
+        console.log('caret position = ' + caret.getPosition(event.target));
     },
 
     checkChanges: function(event) {
@@ -51,6 +53,12 @@ let Para = React.createClass({
             // Broadcast the change up to changes object
             this.props.changed(change);
         }
+    },
+
+    top: function() {
+        let element = document.getElementById(this.props.id),
+            rect = element.getBoundingClientRect();
+        return rect.top - 106;
     }
 
 });

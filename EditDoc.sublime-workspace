@@ -31,32 +31,7 @@
 			"file": "src/js/app.js",
 			"settings":
 			{
-				"buffer_size": 1853,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/components/para.jsx",
-			"settings":
-			{
-				"buffer_size": 1466,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/utils/diff.jsx",
-			"settings":
-			{
-				"buffer_size": 720,
-				"line_ending": "Windows",
-				"name": "let jsDiff = require('diff');"
-			}
-		},
-		{
-			"file": "src/styles/layout.scss",
-			"settings":
-			{
-				"buffer_size": 1964,
+				"buffer_size": 1911,
 				"line_ending": "Windows"
 			}
 		},
@@ -64,7 +39,31 @@
 			"file": "src/js/components/doc.jsx",
 			"settings":
 			{
-				"buffer_size": 1151,
+				"buffer_size": 1319,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/components/para.jsx",
+			"settings":
+			{
+				"buffer_size": 1706,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/components/comment.jsx",
+			"settings":
+			{
+				"buffer_size": 438,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/styles/layout.scss",
+			"settings":
+			{
+				"buffer_size": 2209,
 				"line_ending": "Windows"
 			}
 		}
@@ -160,11 +159,15 @@
 		"/E/Data/Mark/Projects/EditDoc/src/js",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components",
 		"/E/Data/Mark/Projects/EditDoc/src/js/data",
-		"/E/Data/Mark/Projects/EditDoc/src/js/utils",
 		"/E/Data/Mark/Projects/EditDoc/src/styles"
 	],
 	"file_history":
 	[
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/header.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/para.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/utils/diff.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/comment.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/doc.jsx",
 		"/C/Users/Mark/Desktop/smoking.html",
 		"/C/Users/Mark/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/E/Data/Mark/Projects/EditDoc/package.json",
@@ -173,16 +176,13 @@
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/title.jsx",
 		"/E/Data/Mark/Projects/EditDoc/gulpfile.js",
 		"/E/Data/Mark/Projects/EditDoc/dist/assets/js/bundle.js",
-		"/E/Data/Mark/Projects/EditDoc/src/js/components/header.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/toggle-button.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/doc-container.jsx",
-		"/E/Data/Mark/Projects/EditDoc/src/js/components/doc.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/js/app.js",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/nav-pane.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/js/components/comment-pane.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/js/data/app-settings.jsx",
 		"/E/Data/Mark/Projects/EditDoc/src/styles/layout.scss",
-		"/E/Data/Mark/Projects/EditDoc/src/js/components/para.jsx",
 		"/E/Data/Mark/Projects/EditDoc/index.html",
 		"/E/Data/Mark/Projects/EditDoc/src/styles/nav.scss",
 		"/E/Data/Mark/Dropbox/formbuilder/templates/header.html",
@@ -290,9 +290,7 @@
 		"/E/Data/Mark/Projects/osmaps/src/styles/layout.scss",
 		"/E/xampp/htdocs/osmaps/gulpfile.js",
 		"/E/Data/Mark/Projects/osmaps/package.json",
-		"/E/xampp/htdocs/osmaps/package.json",
-		"/E/xampp/htdocs/osmaps/src/styles/layout.scss",
-		"/C/Users/Mark/Desktop/angularMaterial/src/app.js"
+		"/E/xampp/htdocs/osmaps/package.json"
 	],
 	"find":
 	{
@@ -313,6 +311,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"update",
+			"200px",
 			"added",
 			"color",
 			"require",
@@ -438,9 +438,7 @@
 			"Delete User",
 			"$mdDialog",
 			"showSearchResults",
-			"User",
-			"user",
-			"resultsDialog"
+			"User"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -459,7 +457,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -468,15 +466,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1853,
+						"buffer_size": 1911,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1408,
+								1408
 							]
 						],
 						"settings":
@@ -484,27 +482,57 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 448.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/js/components/para.jsx",
+					"file": "src/js/components/doc.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1466,
+						"buffer_size": 1319,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1184,
-								1184
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 112.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/js/components/para.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1706,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								836,
+								836
 							]
 						],
 						"settings":
@@ -514,32 +542,31 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 215.0,
+						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/js/utils/diff.jsx",
+					"buffer": 3,
+					"file": "src/js/components/comment.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 720,
+						"buffer_size": 438,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								647,
-								647
+								413,
+								413
 							]
 						],
 						"settings":
 						{
-							"auto_name": "let jsDiff = require('diff');",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -550,20 +577,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "src/styles/layout.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1964,
+						"buffer_size": 2209,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1576,
-								1576
+								2090,
+								2090
+							],
+							[
+								2159,
+								2159
 							]
 						],
 						"settings":
@@ -573,37 +604,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1605.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/js/components/doc.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1151,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1088,
-								1088
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2069.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,

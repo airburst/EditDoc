@@ -9,7 +9,6 @@ import Data from './data/doc-data';
 import AppSettings from './data/app-settings';
 
 let settings = Immutable.Map(AppSettings);
-console.log(settings);
 //let appState = Immutable.Map();
 
 let DocContainer = React.createClass({
@@ -25,12 +24,11 @@ let DocContainer = React.createClass({
         return (
             <div className="content">
                 <div className="row">
-                    <Header settings={this.state.settings} update={this.updateAppSetting}/>
+                    <Header settings={this.state.settings} update={this.updateAppSetting} addComment={this.addComment}/>
                 </div>
                 <div className="flexbox-container">
                     <NavPane doc={this.props.data} show={this.state.settings.showNav} />
-                    <Doc doc={this.props.data} changed={this.addChange} />
-                    <CommentPane show={this.state.settings.showComments} />
+                    <Doc doc={this.props.data} changed={this.addChange} showComments={this.state.settings.showComments} />
                 </div>
             </div>
         );
@@ -39,6 +37,10 @@ let DocContainer = React.createClass({
     updateAppSetting: function(key, value) {
         AppSettings[key] = value;
         this.setState({settings: AppSettings});
+    },
+
+    addComment: function() {
+        console.log('Add new comment...');
     },
 
     addChange: function(change) {

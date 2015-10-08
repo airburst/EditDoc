@@ -1,6 +1,7 @@
 import React from 'react';
 import Title from './title';
 import Para from './para';
+import Comment from './comment';
 
 let Doc = React.createClass({
 
@@ -29,7 +30,9 @@ let Doc = React.createClass({
                             <h1 id="title">{this.props.doc.title}</h1>
                             {sections}
                         </div>
-                        <div className="comments"></div>
+                        <div className={(!this.props.showComments) ? 'hide ' : '' + 'comments'}>
+                            <Comment commentText={'Comment'} />
+                        </div>
                     </div>
                 </div>
             </div>

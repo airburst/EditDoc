@@ -3,6 +3,7 @@ $doc-container-bg: #e2e2e2;
 $doc-background: white;
 $doc-padding: 50px;
 $top-space: 50px;
+$comment-width: 200px;
 
 html, body, .content {
     height:  100%;
@@ -89,29 +90,41 @@ html, body, .content {
     background-color: $doc-background;
     padding: $doc-padding;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    
     padding: 0px;
-    flex: 1 100%;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    flex-flow: row wrap;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+
+.contents, .comments {
+    flex-grow: 1;
 }
 
 .contents {
-    flex: 1 auto; 
-    width: 80%;
-    display: inline-block;
     padding: 50px;
 }
 
 .comments {
-    flex: 1 auto; 
-    width: 20%;
-    display: inline-block;
+    padding: 10px;
     border-left: 1px solid #e2e2e2;
-    padding: 20px;
 }
 
-.panel-title-right {
-    text-align: center;
+.comment-container {
+    position: relative;
+    height: 100%;
+    width: $comment-width;
+}
+
+.comment-box {
+    position: absolute;
+    width: $comment-width;
+    padding: 10px;
+    border: 1px solid red;
 }

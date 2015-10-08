@@ -34,6 +34,9 @@ let Header = React.createClass({
                                     <ToggleButton active={false} label={'Comments'} icon={'fa-comments'} setting={'showComments'} update={this.props.update}/>
                                 </div>
                             </div>
+                            <div className="navbar-buttons-right">
+                                <button className={'btn btn-default'} onClick={this.addComment}><i className='fa fa-comment'></i><i className='fa fa-plus'></i></button>
+                            </div>
                         </div>
                         
                     </div>
@@ -44,7 +47,11 @@ let Header = React.createClass({
 
     update: function(key, value) {
         this.props.update(key, value);
-    }
+    },
+
+    addComment: function(key, value) {
+        this.props.addComment(key, value);
+    },
 
 });
 
