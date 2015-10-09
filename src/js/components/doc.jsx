@@ -24,7 +24,7 @@ let Doc = React.createClass({
 
         return (
             <div className="centre">
-                <div className="panel-content">
+                <div className="panel-content" id="doc">
                     <div className="doc">
                         <div className="contents">
                             <h1 id="title">{this.props.doc.title}</h1>

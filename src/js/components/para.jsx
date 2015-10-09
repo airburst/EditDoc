@@ -38,10 +38,13 @@ let Para = React.createClass({
         selection = {
             text: text,
             caret: caret.getPosition(event.target),
-            top: this.top()
+            height: event.pageY + document.getElementById('doc').scrollTop - 100
         };
         console.log(selection);
         this.setState({selection: selection});
+        /*<svg>
+            <line x1="0" y1="200" x2="-300" y2="200" style="stroke:red;stroke-width:1"></line>
+        </svg>*/
     },
 
     checkChanges: function(event) {
@@ -69,9 +72,9 @@ let Para = React.createClass({
     },
 
     top: function() {
-        let element = document.getElementById(this.props.id),
-            rect = element.getBoundingClientRect();
-        return rect.top - 106;
+        let item = document.getElementById(this.props.id).getBoundingClientRect(),
+            docScrolled  = document.getElementById('doc').scrollTop;
+        return item.top + docScrolled - 106;
     }
 
 });
