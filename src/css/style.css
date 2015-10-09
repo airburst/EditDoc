@@ -173,19 +173,23 @@ html, body, .content {
   padding: 50px; }
 
 .comments {
-  padding: 10px;
+  padding: 0;
   border-left: 1px solid #e2e2e2; }
 
 .comment-container {
   position: relative;
   height: 100%;
-  width: 200px; }
+  width: 300px; }
 
 .comment-box {
   position: absolute;
-  width: 200px;
+  width: 300px;
   padding: 10px;
-  border: 1px solid red; }
+  border: 1px solid #c0392b; }
+
+.comment-text > input {
+  border: 0;
+  width: 100%; }
 
 /* sidebar */
 .bs-docs-sidebar {

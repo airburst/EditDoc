@@ -6,8 +6,8 @@ let Comment = React.createClass({
         return (
             <div className="comment-container">
                 <div className="comment-box">
-                    <div className="comment-text" contentEditable="true">
-                        {this.props.commentText}
+                    <div className="comment-text">
+                        <input type="text" />
                     </div>
                 </div>
             </div>

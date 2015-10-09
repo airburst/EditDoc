@@ -31,10 +31,4 @@ let caret = {
 
 };
 
-/*document.body.addEventListener("mouseup", function() {
-    var el = document.getElementById("test");
-    var range = window.getSelection().getRangeAt(0);
-    console.log("Caret char pos: " + getCaretPosition(range, el))
-}, false);*/
-
 export default caret;

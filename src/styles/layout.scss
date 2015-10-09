@@ -3,7 +3,7 @@ $doc-container-bg: #e2e2e2;
 $doc-background: white;
 $doc-padding: 50px;
 $top-space: 50px;
-$comment-width: 200px;
+$comment-width: 300px;
 
 html, body, .content {
     height:  100%;
@@ -112,7 +112,7 @@ html, body, .content {
 }
 
 .comments {
-    padding: 10px;
+    padding: 0;
     border-left: 1px solid #e2e2e2;
 }
 
@@ -126,5 +126,10 @@ html, body, .content {
     position: absolute;
     width: $comment-width;
     padding: 10px;
-    border: 1px solid red;
+    border: 1px solid #c0392b;
+}
+
+.comment-text > input {
+    border: 0;
+    width: 100%;
 }
