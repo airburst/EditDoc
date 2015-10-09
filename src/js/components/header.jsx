@@ -32,10 +32,9 @@ let Header = React.createClass({
                                     <ToggleButton active={true} label={'Navigation'} icon={'fa-bars'} setting={'showNav'} update={this.props.update} />
                                     <ToggleButton active={false} label={'Comments'} icon={'fa-comments'} setting={'showComments'} update={this.props.update}/>
                                 </div>
-                            </div>
-                            <div className="navbar-buttons-right">
                                 <button className={'btn btn-default'} onClick={this.addComment}><i className='fa fa-comment'></i><i className='fa fa-plus'></i></button>
                             </div>
+                            
                         </div>
                         
                     </div>
