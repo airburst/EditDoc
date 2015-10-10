@@ -10,6 +10,7 @@ let Doc = React.createClass({
 
         let sections = [],
             lines = [],
+            comments = [],
             count = 1,
             changed = this.props.changed,
             selected = this.props.selected;
@@ -38,7 +39,20 @@ let Doc = React.createClass({
 
         // Lines
         this.props.lines.forEach(function(line) {
-            lines.push(<Line startX={line.startX} endX={line.endX} top={line.top} />);
+            lines.push(
+                <Line
+                    startX={line.startX}
+                    endX={line.endX}
+                    top={line.top} />
+            );
+        });
+
+        // Comments
+        this.props.comments.forEach(function(comment) {
+            console.log(comment);
+            comments.push(
+                <Comment commentText={'Comment'} top={comment.top}/>
+            );
         });
 
         return (
@@ -50,7 +64,7 @@ let Doc = React.createClass({
                             {sections}
                         </div>
                         <div className={'comments' + (!this.props.showComments ? ' comments-hide' : '')} id="comments">
-                            <Comment commentText={'Comment'} />
+                            {comments}
                         </div>
                         {lines}
                     </div>

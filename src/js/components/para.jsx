@@ -35,9 +35,10 @@ let Para = React.createClass({
         }
 
         selection = {
-            text: text,
+            id:    event.target.id,
+            text:  text,
             caret: caret.getPosition(event.target),
-            base: this.base()
+            base:  this.base()
         };
         //console.log(caret.getLine(this.props.id, selection.caret));
         this.props.selected(selection);

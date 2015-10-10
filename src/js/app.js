@@ -5,6 +5,7 @@ import NavPane from './components/nav-pane';
 import Doc from './components/doc';
 import CommentPane from './components/comment-pane';
 import Editor from './components/medium-editor';
+import caret from './utils/selections';
 import {data, lines} from './data/doc-data';
 import AppSettings from './data/app-settings';
 
@@ -18,6 +19,7 @@ let DocContainer = React.createClass({
             settings: AppSettings,
             changes: [],
             comments: [],
+            lines: [],
             selected: {}
         };
     },
@@ -37,7 +39,8 @@ let DocContainer = React.createClass({
                         show={this.state.settings.showNav} />
                     <Doc
                         doc={this.props.data}
-                        lines={this.props.lines}
+                        lines={this.state.lines}
+                        comments={this.state.comments}
                         changed={this.addChange}
                         selected={this.updateSelection}
                         showComments={this.state.settings.showComments} />
@@ -52,15 +55,28 @@ let DocContainer = React.createClass({
     },
 
     addComment: function() {
-        console.log('Add new comment...');
-
         // Wrap highlighted text with span.comment-hl
-        // Does this work with a single caret position?
+
+        
+        // Add a line
+        let doc = document.getElementById('contents').getBoundingClientRect();
+        let selectedLine = caret.getLine(this.state.selected.id, this.state.selected.caret);
+        let bottomLine = caret.getLine(this.state.selected.id);
+        let offset = (bottomLine - selectedLine) * 20;
+        let height = this.state.selected.base - offset;
+        let line = {
+            startX: 300,
+            endX: doc.width + 40,  // 40px right padding on contents
+            top: height
+        };
+        this.setState({lines: self.state.lines.concat([line])});
+
+        // Add comment box
+        this.setState({comments: self.state.comments.concat([{top: height - 62}])});
     },
 
     addChange: function(change) {
-        self.setState({changes: self.state.changes.concat([change])});
-        console.log(self.state.changes.length);
+        this.setState({changes: self.state.changes.concat([change])});
     },
 
     updateSelection: function(selection) {

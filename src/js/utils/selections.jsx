@@ -80,6 +80,9 @@ let caret = {
             max,
             i;
 
+        // If no caret position, return number of lines
+        if (caretPosition === undefined) { caretPosition = paragraphText.length; }
+
         // Parse paragraph into an array of words
         if (spanChildren.length === 0) {
             words = paragraphText.split(' ');
