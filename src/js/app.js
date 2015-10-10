@@ -5,7 +5,7 @@ import NavPane from './components/nav-pane';
 import Doc from './components/doc';
 import CommentPane from './components/comment-pane';
 import Editor from './components/medium-editor';
-import Data from './data/doc-data';
+import {data, lines} from './data/doc-data';
 import AppSettings from './data/app-settings';
 
 let settings = Immutable.Map(AppSettings);
@@ -16,7 +16,8 @@ let DocContainer = React.createClass({
     getInitialState: function() {
         return {
             settings: AppSettings,
-            changes: []
+            changes: [],
+            comments: []
         };
     },
 
@@ -24,11 +25,20 @@ let DocContainer = React.createClass({
         return (
             <div className="content">
                 <div className="row">
-                    <Header settings={this.state.settings} update={this.updateAppSetting} addComment={this.addComment}/>
+                    <Header
+                        settings={this.state.settings}
+                        update={this.updateAppSetting}
+                        addComment={this.addComment}/>
                 </div>
                 <div className="flexbox-container">
-                    <NavPane doc={this.props.data} show={this.state.settings.showNav} />
-                    <Doc doc={this.props.data} changed={this.addChange} showComments={this.state.settings.showComments} />
+                    <NavPane
+                        doc={this.props.data}
+                        show={this.state.settings.showNav} />
+                    <Doc
+                        doc={this.props.data}
+                        lines={this.props.lines}
+                        changed={this.addChange}
+                        showComments={this.state.settings.showComments} />
                 </div>
             </div>
         );
@@ -44,9 +54,6 @@ let DocContainer = React.createClass({
 
         // Wrap highlighted text with span.comment-hl
         // Does this work with a single caret position?
-        // 
-        // 
-        // 
     },
 
     addChange: function(change) {
@@ -67,4 +74,4 @@ let DocContainer = React.createClass({
 
 });
 
-React.render(<DocContainer data={Data} settings={AppSettings} />, document.body);
+React.render(<DocContainer data={data} lines={lines} settings={AppSettings} />, document.body);

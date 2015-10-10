@@ -1,4 +1,5 @@
-var docData = {
+let data = {
+
     title: 'Document Title',
     content: [
         {type: 'title', text: 'Section 1'},
@@ -36,6 +37,15 @@ var docData = {
         {type: 'para', text: 'Proin accumsan felis diam, ac porta erat feugiat nec. Suspendisse vel dolor non felis gravida tincidunt in nec velit. Pellentesque iaculis felis tellus, id finibus dui suscipit id. Phasellus massa arcu, tincidunt quis faucibus eu, feugiat eget quam. Cras mauris erat, suscipit sed aliquet quis, aliquam pretium mauris. Quisque pulvinar bibendum erat, ultrices mattis ante vestibulum hendrerit. Nullam quis varius elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta velit sed lectus blandit fermentum. Maecenas eu ex a eros tincidunt ultricies at non quam.'},
         {type: 'para', text: 'Proin accumsan felis diam, ac porta erat feugiat nec. Suspendisse vel dolor non felis gravida tincidunt in nec velit. Pellentesque iaculis felis tellus, id finibus dui suscipit id. Phasellus massa arcu, tincidunt quis faucibus eu, feugiat eget quam. Cras mauris erat, suscipit sed aliquet quis, aliquam pretium mauris. Quisque pulvinar bibendum erat, ultrices mattis ante vestibulum hendrerit. Nullam quis varius elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta velit sed lectus blandit fermentum. Maecenas eu ex a eros tincidunt ultricies at non quam.'}
     ]
+
 };
 
-export default docData;
+let lines = [
+    {
+        startX: 300,
+        endX: 1000,
+        top: 300
+    }
+];
+
+export default {data, lines};

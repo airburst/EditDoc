@@ -2,15 +2,18 @@ import React from 'react';
 import Title from './title';
 import Para from './para';
 import Comment from './comment';
+import Line from './line';
 
 let Doc = React.createClass({
 
     render: function() {
 
-        let sections = [];
-        let count = 1;
-        let changed = this.props.changed;
+        let sections = [],
+            lines = [],
+            count = 1,
+            changed = this.props.changed;
 
+        // Content
         this.props.doc.content.forEach(function(item) {
             switch(item.type) {
                 case 'title':
@@ -20,6 +23,11 @@ let Doc = React.createClass({
                     sections.push(<Para id={count++} text={item.text} changed={changed}/>);
                     break;
             }
+        });
+
+        // Lines
+        this.props.lines.forEach(function(line) {
+            lines.push(<Line startX={line.startX} endX={line.endX} top={line.top} />);
         });
 
         return (
@@ -33,6 +41,7 @@ let Doc = React.createClass({
                         <div className={'comments' + (!this.props.showComments ? ' comments-hide' : '')} id="comments">
                             <Comment commentText={'Comment'} />
                         </div>
+                        {lines}
                     </div>
                 </div>
             </div>
