@@ -42,6 +42,8 @@ let Para = React.createClass({
             height: event.pageY + document.getElementById('doc').scrollTop - 100
         };
         console.log(selection);
+        console.log('Test for Line 3');
+        console.log(caret.lineNumber(this.props.id, 3));
         this.setState({selection: selection});
     },
 
