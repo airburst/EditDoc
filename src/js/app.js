@@ -17,7 +17,8 @@ let DocContainer = React.createClass({
         return {
             settings: AppSettings,
             changes: [],
-            comments: []
+            comments: [],
+            selected: {}
         };
     },
 
@@ -38,6 +39,7 @@ let DocContainer = React.createClass({
                         doc={this.props.data}
                         lines={this.props.lines}
                         changed={this.addChange}
+                        selected={this.updateSelection}
                         showComments={this.state.settings.showComments} />
                 </div>
             </div>
@@ -59,6 +61,10 @@ let DocContainer = React.createClass({
     addChange: function(change) {
         self.setState({changes: self.state.changes.concat([change])});
         console.log(self.state.changes.length);
+    },
+
+    updateSelection: function(selection) {
+        this.setState({selected: selection});
     },
 
     componentDidMount: function() {

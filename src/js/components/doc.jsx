@@ -11,16 +11,27 @@ let Doc = React.createClass({
         let sections = [],
             lines = [],
             count = 1,
-            changed = this.props.changed;
+            changed = this.props.changed,
+            selected = this.props.selected;
 
         // Content
         this.props.doc.content.forEach(function(item) {
             switch(item.type) {
                 case 'title':
-                    sections.push(<Title id={count++} text={item.text} />);
+                    sections.push(
+                        <Title
+                            id={count++}
+                            text={item.text} />
+                    );
                     break;
                 case 'para':                
-                    sections.push(<Para id={count++} text={item.text} changed={changed}/>);
+                    sections.push(
+                        <Para
+                            id={count++}
+                            text={item.text}
+                            changed={changed}
+                            selected={selected} />
+                    );
                     break;
             }
         });

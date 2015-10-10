@@ -7,15 +7,13 @@ let Para = React.createClass({
 
     getInitialState: function() {
         return {
-            text: this.props.text,
-            selection: {}
+            text: this.props.text
         };
     },
 
     render: function() {
         return (
             <a className="editable">
-                <EditButtons />
                 <p 
                     id={this.props.id} 
                     onBlur={this.checkChanges}
@@ -41,9 +39,8 @@ let Para = React.createClass({
             caret: caret.getPosition(event.target),
             base: this.base()
         };
-        console.log(selection);
         //console.log(caret.getLine(this.props.id, selection.caret));
-        this.setState({selection: selection});
+        this.props.selected(selection);
     },
 
     checkChanges: function(event) {
