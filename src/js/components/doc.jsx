@@ -26,11 +26,11 @@ let Doc = React.createClass({
             <div className="centre">
                 <div className="panel-content" id="doc">
                     <div className="doc">
-                        <div className="contents">
+                        <div className="contents" id="contents">
                             <h1 id="title">{this.props.doc.title}</h1>
                             {sections}
                         </div>
-                        <div className={(!this.props.showComments) ? 'hide ' : '' + 'comments'}>
+                        <div className={'comments' + (!this.props.showComments ? ' comments-hide' : '')} id="comments">
                             <Comment commentText={'Comment'} />
                         </div>
                     </div>

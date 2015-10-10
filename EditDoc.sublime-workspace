@@ -4,172 +4,24 @@
 		"selected_items":
 		[
 			[
-				"set",
-				"setState"
+				"bow",
+				"bowerResolve"
 			],
 			[
-				"h",
-				"href	Attr"
-			],
-			[
-				"name",
-				"namedRanges"
-			],
-			[
-				"var",
-				"var_dump"
-			],
-			[
-				"show",
-				"showToast"
-			],
-			[
-				"remo",
-				"removeSpot"
-			],
-			[
-				"add",
-				"addSpot"
-			],
-			[
-				"tog",
-				"toggleSearch"
-			],
-			[
-				"elev",
-				"elevationShown"
-			],
-			[
-				"par",
-				"parsePostcode"
-			],
-			[
-				"se",
+				"sea",
 				"searchResults"
 			],
 			[
-				"pla",
-				"placeName"
+				"set",
+				"setCenter"
 			],
 			[
-				"ele",
-				"elevationShown"
+				"dra",
+				"drawRoute"
 			],
 			[
-				"for",
-				"foreach	foreach …"
-			],
-			[
-				"mari",
-				"margin-top"
-			],
-			[
-				"padd",
-				"padding-left"
-			],
-			[
-				"s",
-				"save"
-			],
-			[
-				"fu",
-				"function"
-			],
-			[
-				"font",
-				"font-size"
-			],
-			[
-				"text",
-				"text-decoration"
-			],
-			[
-				"parse",
-				"parseFloat"
-			],
-			[
-				"back",
-				"background-color"
-			],
-			[
-				"de",
-				"deepRuleId"
-			],
-			[
-				"tru",
-				"truthTable"
-			],
-			[
-				"bac",
-				"background-color"
-			],
-			[
-				"re",
-				"remove"
-			],
-			[
-				"chan",
-				"changeList"
-			],
-			[
-				"cha",
-				"changeList"
-			],
-			[
-				"pr",
-				"privateMethod"
-			],
-			[
-				"pro",
-				"prototype"
-			],
-			[
-				"get",
-				"getPositionByIndex"
-			],
-			[
-				"rul",
-				"rulestable"
-			],
-			[
-				"seelcted",
-				"selectedvalue"
-			],
-			[
-				"compo",
-				"componentTemplate"
-			],
-			[
-				"ta",
-				"target	Attr"
-			],
-			[
-				"margin",
-				"margin-top"
-			],
-			[
-				"fon",
-				"font-size"
-			],
-			[
-				"min-",
-				"min-height"
-			],
-			[
-				"calc",
-				"calcData"
-			],
-			[
-				"message",
-				"messageBody"
-			],
-			[
-				"data-col",
-				"data-coldata"
-			],
-			[
-				"tar",
-				"targetControl"
+				"elev",
+				"elevationRoute"
 			]
 		]
 	},
@@ -179,7 +31,7 @@
 			"file": "src/js/app.js",
 			"settings":
 			{
-				"buffer_size": 1911,
+				"buffer_size": 2058,
 				"line_ending": "Windows"
 			}
 		},
@@ -187,98 +39,107 @@
 			"file": "src/js/components/doc.jsx",
 			"settings":
 			{
-				"buffer_size": 1328,
+				"buffer_size": 1365,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "import React from 'react';\nimport EditButtons from './edit-buttons';\nimport caret from '../utils/selections';\nimport diff from '../utils/diff';\n\nlet Para = React.createClass({\n\n    getInitialState: function() {\n        return {\n            text: this.props.text,\n            selection: {}\n        };\n    },\n\n    render: function() {\n        return (\n            <a className=\"editable\">\n                <EditButtons />\n                <p \n                    id={this.props.id} \n                    onBlur={this.checkChanges}\n                    onMouseUp={this.onMouseUp}>\n                    {this.state.text}\n                </p>\n            </a>\n        );\n    },\n\n    onMouseUp: function(event) {\n        var text = \"\",\n            selection;\n\n        if (window.getSelection) {\n            text = window.getSelection().toString();\n        } else if (document.selection && document.selection.type != \"Control\") {\n            text = document.selection.createRange().text;\n        }\n        selection = {\n            text: text,\n            caret: caret.getPosition(event.target),\n            height: event.pageY + document.getElementById('doc').scrollTop - 100\n        };\n        console.log(selection);\n        this.setState({selection: selection});\n        /*<svg>\n            <line x1=\"0\" y1=\"200\" x2=\"-300\" y2=\"200\" style=\"stroke:red;stroke-width:1\"></line>\n        <line x1=\"20\" y1=\"100\" \n          x2=\"100\" y2=\"20\" \n          stroke=\"black\" \n          stroke-width=\"2\"/>\n          </svg>*/\n    },\n\n    checkChanges: function(event) {\n        event.preventDefault();\n        event.stopPropagation();\n\n        let newText = event.target.innerText.trim();    //TODO: compare html, not text\n        if (newText !== this.state.text) {\n            // Create change object\n            let change = {\n                id:   event.target.id,\n                oldValue: this.state.text,\n                newValue: newText\n            };\n\n            // Diff\n            console.log(diff.compare(this.state.text, newText));\n\n            // Set text state\n            this.setState({text: newText});\n\n            // Broadcast the change up to changes object\n            this.props.changed(change);\n        }\n    },\n\n    top: function() {\n        let item = document.getElementById(this.props.id).getBoundingClientRect(),\n            docScrolled  = document.getElementById('doc').scrollTop;\n        return item.top + docScrolled - 106;\n    }\n\n});\n\nexport default Para;\n",
 			"file": "src/js/components/para.jsx",
-			"file_size": 2428,
-			"file_write_time": 130889006799756688,
 			"settings":
 			{
-				"buffer_size": 2463,
+				"buffer_size": 2219,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/styles/layout.scss",
+			"settings":
+			{
+				"buffer_size": 2654,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/components/comment.jsx",
+			"settings":
+			{
+				"buffer_size": 412,
 				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
-		"height": 150.0,
+		"height": 392.0,
+		"last_filter": "str",
 		"selected_items":
 		[
 			[
-				"Package Control: ins",
-				"Package Control: Install Package"
-			],
-			[
-				"git:qu",
-				"Git: Quick Commit"
-			],
-			[
-				"git: add",
-				"Git: Add..."
-			],
-			[
-				"Package Control: inst",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: ",
-				"Package Control: List Packages"
+				"str",
+				"StringEncode: URL Decode"
 			],
 			[
 				"Package Control: install",
 				"Package Control: Install Package"
 			],
 			[
-				"in",
+				"git quic",
+				"Git: Quick Commit"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git sta",
+				"Git: Stash Apply"
+			],
+			[
+				"git add .",
+				"Git: Add..."
+			],
+			[
+				"git add ",
+				"Git: Add..."
+			],
+			[
+				"git s",
+				"Git: Status"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"Package Control: ",
 				"Package Control: Install Package"
 			],
 			[
-				"jscs",
-				"JSCS Formatter: Format this file"
-			],
-			[
-				"instal",
+				"Package Control: insta",
 				"Package Control: Install Package"
 			],
 			[
-				"packa",
+				"Package Control: ins",
 				"Package Control: Install Package"
 			],
 			[
-				"package",
+				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"pack",
-				"Package Control: List Packages"
-			],
-			[
-				"hex",
-				"Hex Viewer: Toggle Hex View"
-			],
-			[
-				"h",
-				"Hex Viewer: Toggle Hex View"
-			],
-			[
-				"",
-				"Hex Viewer: Toggle Hex View"
 			]
 		],
 		"width": 416.0
 	},
 	"console":
 	{
-		"height": 146.0,
+		"height": 174.0,
 		"history":
 		[
-			"php artisan tinker",
-			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
 		]
 	},
 	"distraction_free":
@@ -290,136 +151,147 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/E/Data/Mark/Projects/EditDoc",
+		"/E/Data/Mark/Projects/EditDoc/spec",
+		"/E/Data/Mark/Projects/EditDoc/src",
+		"/E/Data/Mark/Projects/EditDoc/src/js",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components",
+		"/E/Data/Mark/Projects/EditDoc/src/js/data",
+		"/E/Data/Mark/Projects/EditDoc/src/js/utils",
+		"/E/Data/Mark/Projects/EditDoc/src/styles"
+	],
 	"file_history":
 	[
-		"/C/Dev/EditDoc/src/js/components/header.jsx",
-		"/C/Dev/EditDoc/spec/immutable.spec.js",
-		"/C/Dev/EditDoc/package.json",
-		"/C/Users/markfa/Dropbox/OLM/Products/MyLife/Customers/Devon/devon.js",
-		"/C/Dev/EditDoc/devon.js",
-		"/C/Dev/EditDoc/src/js/data/doc-data.jsx",
-		"/C/Dev/EditDoc/spec/test.js",
-		"/C/Dev/EditDoc/src/js/utils/caret.jsx",
-		"/C/Dev/EditDoc/src/js/components/para.jsx",
-		"/C/Dev/EditDoc/src/js/components/medium-editor.jsx",
-		"/C/Dev/EditDoc/src/js/utils/get-caret-position.jsx",
-		"/C/Dev/EditDoc/src/js/classes/change.jsx",
-		"/C/Dev/EditDoc/src/js/components/nav-pane.jsx",
-		"/C/Dev/EditDoc/src/js/components/doc.jsx",
-		"/C/Dev/EditDoc/src/js/utils/uuid.jsx",
-		"/C/Dev/EditDoc/src/styles/layout.scss",
-		"/C/Dev/EditDoc/src/styles/nav.scss",
-		"/C/Dev/EditDoc/src/js/components/toggle-button.jsx",
-		"/C/Dev/EditDoc/src/js/app.js",
-		"/C/Dev/EditDoc/index.html",
-		"/C/Dev/EditDoc/src/styles/edit.scss",
-		"/C/Dev/EditDoc/gulpfile.js",
-		"/C/Users/markfa/Desktop/flexbox-editdoc/index.html",
-		"/C/Users/markfa/Desktop/flexbox-editdoc/flex.css",
-		"/C/Dev/EditDoc/src/styles/main.scss",
-		"/C/Dev/EditDoc/src/styles/flex.scss",
-		"/C/Users/markfa/Dropbox/formbuilder/css/style.css",
-		"/C/Dev/Excel2JS/gulpfile.js",
-		"/C/Users/markfa/Dropbox/formbuilder/css/flex.css",
-		"/C/Dev/Material Maps/package.json",
-		"/C/Dev/Excel2JS/dist/bundle.js",
-		"/C/Dev/Excel2JS/bundle.js",
-		"/C/Dev/Excel2JS/package.json",
-		"/C/xampp/htdocs/ExCell/index.php",
-		"/C/xampp/htdocs/ExCell/upload.php",
-		"/C/xampp/htdocs/ExCell/process.php",
-		"/C/Users/markfa/Dropbox/Code/PHP/SimpleImage.php",
-		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Documentation/markdown/Overview/01-Getting-Started.md",
-		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/unitTests/rawTestData/CellGetRangeBoundaries.data",
-		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/unitTests/rawTestData/Calculation/Engineering/GESTEP.data",
-		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Examples/GnumericReader.php",
-		"/C/xampp/htdocs/exCell/vendor/composer/autoload_namespaces.php",
-		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Examples/data/continents/North America.txt",
-		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Classes/PHPExcel/Cell.php",
-		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Classes/PHPExcel/ReferenceHelper.php",
-		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/FormulaParser.php",
-		"/C/xampp/htdocs/exCell/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/FormulaToken.php",
-		"/C/Users/markfa/Dropbox/OLM/Products/Calc Engine/Analysis and Design/POC/Calc Engine/parser-0.2.js",
-		"/C/Users/markfa/Dropbox/OLM/Products/Calc Engine/Analysis and Design/POC/Calc Engine/excelfunctions-0.1.js",
-		"/C/xampp/htdocs/Calc2/index.php",
-		"/C/xampp/htdocs/Calc2/classes/cell.php",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/caret.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/header.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/utils/selections.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/styles/layout.scss",
 		"//",
-		"/C/Dev/Formulae/node_modules/formula-vlookup/VLOOKUP.es6",
-		"/C/Dev/Formulae/package.json",
-		"/C/Dev/Material Maps/gulpfile.js",
-		"/C/Dev/Material Maps/src/js/controllers/toolbarController.js",
-		"/C/Dev/Material Maps/src/js/directives/index.js",
-		"/C/Dev/Material Maps/src/js/files.js",
-		"/C/Dev/Material Maps/src/js/controllers/bottomSheetController.js",
-		"/C/Dev/Material Maps/src/js/directives/infopanel.js",
-		"/C/Dev/Material Maps/src/js/directives/header.js",
-		"/C/Dev/Material Maps/index.php",
-		"/C/Dev/Material Maps/src/js/templates/bottomSheet.html",
-		"/C/Dev/Material Maps/src/js/directives/onReadFile.js",
-		"/C/Dev/Material Maps/src/js/app.js",
-		"/C/Dev/Material Maps/src/js/directives/fileRead.js",
-		"/C/xampp/osmaps/src/js/components/open-file-component.js",
-		"/C/xampp/osmaps/src/js/app.js",
-		"/C/xampp/osmaps/src/js/components/modal-component.js",
-		"/C/Dev/Material Maps/src/js/templates/searchResultsDialog.html",
-		"/C/Dev/Material Maps/src/js/controllers/mapController.js",
-		"/C/Dev/Material Maps/src/js/components/open-file-component.js",
-		"/C/Dev/Material Maps/todo.txt",
-		"/C/Dev/Material Maps/src/js/components/infopanel-component.js",
-		"/C/Dev/Material Maps/src/js/app-vue.js",
-		"/C/Dev/Material Maps/node_modules/angular-material/modules/closure/bottomSheet/bottomSheet.css",
-		"/C/Dev/Material Maps/node_modules/xmldoc/node_modules/sax/test/buffer-overrun.js",
-		"/C/Dev/Material Maps/src/js/controllers/index.js",
-		"/C/Users/markfa/Downloads/route.gpx",
-		"/C/Dev/Material Maps/index.html",
-		"/C/Dev/Material Maps/node_modules/dragula/example/example.css",
-		"/C/Dev/Material Maps/node_modules/babelify/node_modules/babel-core/node_modules/json5/test/parse-cases/new-lines/escaped-lf.json5",
-		"/C/Dev/Material Maps/node_modules/xml-writer/test/element.js",
-		"/C/Dev/Material Maps/src/js/templates/elevationChartBottomSheet.html",
-		"/C/Dev/Material Maps/node_modules/angular/bower.json",
-		"/C/Dev/Material Maps/node_modules/gulp-autoprefixer/node_modules/autoprefixer-core/node_modules/caniuse-db/region-usage-json/alt-oc.json",
-		"/C/Dev/Material Maps/node_modules/gulp-jshint/src/fileIgnored.js",
-		"/C/Dev/Material Maps/route-format.gpx",
-		"/C/Dev/Material Maps/node_modules/gulp-uglify/.idea/gulp-uglify.iml",
-		"/C/Dev/Material Maps/src/styles/chart.scss",
-		"/C/Dev/Material Maps/node_modules/angular-chartist.js/CHANGELOG.md",
-		"/C/Dev/Material Maps/node_modules/gulp-autoprefixer/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/css-hyphens.json",
-		"/C/Dev/Material Maps/src/styles/layout.scss",
-		"/C/Dev/Material Maps/node_modules/gulp-browserify/node_modules/browserify/node_modules/JSONStream/LICENSE.APACHE2",
-		"/C/Dev/Material Maps/node_modules/angular-chartist.js/LICENSE",
-		"/C/Dev/Material Maps/src/js/templates/header.html",
-		"/C/Dev/Material Maps/node_modules/gulp-jshint/node_modules/lodash/internal/toObject.js",
-		"/C/Dev/Material Maps/src/js/index.js",
-		"/C/Users/markfa/Desktop/careController.js",
-		"/C/Users/markfa/Desktop/index.htm",
-		"/C/Dev/Material Maps/src/js/templates/infopanel.html",
-		"/C/Dev/Material Maps/src/js/templates/search-results.html",
-		"/C/Dev/Material Maps/src/js/directives/searchResults.js",
-		"/C/Dev/Material Maps/node_modules/gulp-sass/node_modules/node-sass/node_modules/pangyp/node_modules/tar/lib/extended-header-writer.js",
-		"/C/Dev/Material Maps/node_modules/babelify/node_modules/babel-core/node_modules/json5/test/parse-cases/numbers/hexadecimal-empty.txt",
-		"/C/Dev/Material Maps/node_modules/gulp-jshint/node_modules/lodash/internal/baseForOwnRight.js",
-		"/C/Dev/Material Maps/node_modules/gulp-sass/node_modules/node-sass/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/test/json-schema-draft4/nullAndFormat.json",
-		"/C/Dev/Material Maps/node_modules/gulp/node_modules/gulp-util/lib/isNull.js",
-		"/C/Users/markfa/Desktop/app.js",
-		"/C/Dev/Material Maps/node_modules/babelify/node_modules/babel-core/node_modules/js-tokens/generate-index.js",
-		"/C/Dev/Material Maps/node_modules/babelify/node_modules/babel-core/node_modules/core-js/fn/get-iterator.js",
-		"/C/Dev/Material Maps/node_modules/gulp-uglify/.idea/atlassian-ide-plugin.xml",
-		"/C/Dev/Material Maps/node_modules/dragula/node_modules/contra/map.js",
-		"/C/Dev/Material Maps/node_modules/gulp-jshint/node_modules/lodash/function/modArgs.js",
-		"/C/Dev/Material Maps/node_modules/gulp-uglify/minifier.js",
-		"/C/Users/markfa/Dropbox/formbuilder/js/runtime.js",
-		"/C/Users/markfa/Dropbox/formbuilder/js/runtime.visibility.js",
-		"/C/Users/markfa/Dropbox/formbuilder/gruntfile.js",
-		"/C/Users/markfa/Dropbox/formbuilder/js/files.js",
-		"/C/Users/markfa/Dropbox/formbuilder/js/Shelter.Custom.js",
-		"/C/Users/markfa/Dropbox/formbuilder/js/utils.js",
-		"/C/Users/markfa/Dropbox/Code/nginx/main",
-		"/C/Users/markfa/Desktop/main",
-		"/C/Users/markfa/Desktop/error.log",
-		"/C/Users/markfa/Desktop/access.log",
-		"/C/Users/markfa/Dropbox/Code/nginx/api",
-		"/C/Users/markfa/Dropbox/Code/nginx/wordpress",
-		"/C/Users/markfa/Dropbox/Code/nginx/laravel"
+		"/C/Users/Mark/Desktop/devon.js",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/para.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/utils/diff.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/comment.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/doc.jsx",
+		"/C/Users/Mark/Desktop/smoking.html",
+		"/C/Users/Mark/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/E/Data/Mark/Projects/EditDoc/package.json",
+		"/C/Program Files/nodejs/node_modules/npm/node_modules/node-gyp/lib/configure.js",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/medium-editor.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/title.jsx",
+		"/E/Data/Mark/Projects/EditDoc/gulpfile.js",
+		"/E/Data/Mark/Projects/EditDoc/dist/assets/js/bundle.js",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/toggle-button.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/doc-container.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/app.js",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/nav-pane.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/comment-pane.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/data/app-settings.jsx",
+		"/E/Data/Mark/Projects/EditDoc/index.html",
+		"/E/Data/Mark/Projects/EditDoc/src/styles/nav.scss",
+		"/E/Data/Mark/Dropbox/formbuilder/templates/header.html",
+		"/E/Data/Mark/Dropbox/formbuilder/css/flex.css",
+		"/E/Data/Mark/Projects/EditDoc/index-static.html",
+		"/E/Data/Mark/Projects/EditDoc/src/js/data/doc-data.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/styles/edit.scss",
+		"/E/Data/Mark/Projects/EditDoc/src/js/utils/uuid.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/edit-buttons.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/navpane.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/data/docData.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/heading.jsx",
+		"/E/Data/Mark/Projects/EditDoc/src/js/components/content.jsx",
+		"/E/Data/Mark/Projects/EditDoc/index.static.html",
+		"/E/Data/Mark/Projects/Checklists/index.html",
+		"/E/Data/Mark/Projects/Checklists/dist/css/material.min.css",
+		"/E/Data/Mark/Projects/Checklists/dist/js/material.min.js",
+		"/E/Data/Mark/Projects/Checklists/dist/js/jquery-1.10.2.min.js",
+		"/E/Data/Mark/Projects/Checklists/bootstrap-material-design-master/index.html",
+		"/E/Data/Mark/Projects/EditDoc/node_modules/medium-editor/dist/js/medium-editor.js",
+		"/E/Data/Mark/Projects/EditDoc/bower_components/pen/src/pen.js",
+		"/E/Data/Mark/Projects/EditDoc/dist/assets/js/pen.js",
+		"/E/Data/Mark/Projects/EditDoc/.gitignore",
+		"/E/Data/Mark/Projects/Flexbox/flex.css",
+		"/E/Data/Mark/Projects/Flexbox/index.html",
+		"/E/Data/Mark/Projects/ExcelToJS/src/js/app.js",
+		"/E/Data/Mark/Projects/Material Maps/index.html",
+		"/C/Users/Mark/Desktop/ExcelToJS/index.html",
+		"/E/Data/Mark/Projects/ExcelToJS/gulpfile.js",
+		"/C/Users/Mark/Desktop/ExcelToJS/gulpfile.js",
+		"/E/Data/Mark/Projects/ExcelToJS/src/js/app.js.bak",
+		"/E/Data/Mark/Projects/ExcelToJS/index.html",
+		"/E/Data/Mark/Projects/ExcelToJS/node_modules/mammoth/lib/index.js",
+		"/E/Data/Mark/Projects/ExcelToJS/node_modules/formula-errors/index.es6",
+		"/E/Data/Mark/Projects/ExcelToJS/npm-debug.log",
+		"/E/Data/Mark/Projects/ExcelToJS/formula-packages.bat",
+		"/E/Data/Mark/Projects/ExcelToJS/package.json",
+		"/E/Data/Mark/Projects/ExcelToJS/app.js",
+		"/E/Data/Mark/Projects/Material Maps/gulpfile.js",
+		"/E/Data/Mark/Projects/Material Maps/src/styles/chart.scss",
+		"/E/Data/Mark/Projects/Material Maps/src/styles/layout.scss",
+		"/E/Data/Mark/Projects/Material Maps/src/js/app.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/directives/chartistTooltip.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/directives/index.js",
+		"/E/Data/Mark/Projects/Material Maps/package.json",
+		"/C/Users/Mark/Desktop/careController.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/app-vue.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/controllers/chartController.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/controllers/index.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/index.js",
+		"/E/Data/Mark/Projects/Material Maps/node_modules/angular-chartjs/demo/app.js",
+		"/C/Users/Mark/Desktop/index.htm",
+		"/I/Software/Office - Productivity/CheckPointVPN-WIN7-X64/site.txt",
+		"/E/Data/Mark/Projects/Material Maps/src/js/templates/header.html",
+		"/E/Data/Mark/Projects/Material Maps/src/js/templates/searchResultsDialog.html",
+		"/E/Data/Mark/Projects/Material Maps/src/js/templates/infopanel.html",
+		"/E/Data/Mark/Projects/Material Maps/src/js/directives/infopanel.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/controllers/bottomSheetController.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/controllers/toolbarController.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/templates/elevationChartBottomSheet.html",
+		"/E/Data/Mark/Projects/Material Maps/todo.txt",
+		"/E/Data/Mark/Projects/Material Maps/src/js/controllers/searchController.js",
+		"/C/Users/Mark/Desktop/contact-layout.html",
+		"/C/Users/Mark/Desktop/contactsControllers.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/templates/search-results.html",
+		"/E/Data/Mark/Projects/Material Maps/src/js/directives/searchResults.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/services/searchDialog.js",
+		"/E/Data/Mark/Projects/Material Maps/dist/assets/js/app.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/services/index.js",
+		"/E/Data/Mark/Projects/osmaps/src/js/app.js",
+		"/E/Data/Mark/Projects/osmaps/src/js/components/header-component.js",
+		"/E/Data/Mark/Projects/Material Maps/src/styles/main.scss",
+		"/C/Users/Mark/Desktop/angular-care-cap/angular-care-cap/js/controllers/careController.js",
+		"/C/Users/Mark/Desktop/angular-care-cap/angular-care-cap/js/app.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/components/infopanel-component.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/directives/header.js",
+		"/C/Users/Mark/Desktop/angular-care-cap/angular-care-cap/index.htm",
+		"/C/Users/Mark/Desktop/header.html",
+		"/C/Users/Mark/Desktop/header.js",
+		"/E/Data/Mark/Projects/Material Maps/src/js/files.js",
+		"/C/Users/Mark/Desktop/app.js",
+		"/E/Data/Mark/Projects/osmaps/gulpfile.js",
+		"/E/Data/Mark/Projects/Material Maps/.gitignore",
+		"/E/Data/Mark/Dropbox/formbuilder/js/Shelter.Feedback.js",
+		"/E/Data/Mark/Dropbox/formbuilder/js/runtime.tablegroup.js",
+		"/E/Data/Mark/Dropbox/formbuilder/js/runtime.js",
+		"/E/Data/Mark/Dropbox/formbuilder/js/modes/affordability.js",
+		"/E/Data/Mark/Dropbox/formbuilder/js/views.templates.js",
+		"/E/Data/Mark/Dropbox/formbuilder/js/Shelter.Templates.js",
+		"/E/Data/Mark/Dropbox/formbuilder/css/style.css",
+		"/E/Data/Mark/Dropbox/formbuilder/js/init.js",
+		"/E/Data/Mark/Dropbox/formbuilder/js/utils.js",
+		"/E/Data/Mark/Dropbox/formbuilder/dist/data/la.js",
+		"/E/Data/Mark/Dropbox/formbuilder/gruntfile.js",
+		"/E/Data/Mark/Dropbox/formbuilder/examples/BCC/INT/BCC-A+F-Enquiry.htm",
+		"/E/Data/Mark/Dropbox/formbuilder/js/runtime.init.js",
+		"/E/Data/Mark/Dropbox/formbuilder/dist/Affordability.htm",
+		"/E/Data/Mark/Dropbox/formbuilder/js/libs/parsley200.js",
+		"/C/Users/Mark/Desktop/docs/gulpfile.js",
+		"/E/Data/Mark/Dropbox/payload.txt",
+		"/C/Users/Mark/Desktop/New Text Document.txt",
+		"/E/Data/Mark/Projects/osmaps/todo.txt",
+		"/E/Data/Mark/Projects/osmaps/src/js/files.js",
+		"/E/Data/Mark/Projects/osmaps/src/styles/layout.scss"
 	],
 	"find":
 	{
@@ -427,26 +299,12 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 102.0,
 		"where_history":
 		[
-			"",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
-			"C:\\Users\\Mark\\Desktop\\formbuilder-0.5.5-full-source\\formbuilder\\js",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\templates",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\templates",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\templates",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
-			"FB.d(",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\templates",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder\\js",
-			"F:\\Data\\Mark\\Dropbox\\formbuilder"
+			"E:\\Data\\Mark\\Projects\\EditDoc\\src\\js",
+			"E:\\Data\\Mark\\Projects\\Material Maps\\src\\js",
+			""
 		]
 	},
 	"find_state":
@@ -454,134 +312,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"doAjax123",
-			"removecontrast",
-			"removefont",
-			"gelfunc",
-			"createCookie",
-			"readCookie",
-			"eraseCookie",
-			"gelfunc",
-			"doAjax123",
-			"\"",
-			"\")",
-			"(\"",
-			"({ size: 3, _origin: 0, _capacity: 3, _level: 5, _root: null, _tail: VNode({ array: [ 'Trainspotting', '28 Days Later', 'Sunshine' ], ownerID: OwnerID({  }) }), __ownerID: undefined, __hash: undefined, __altered: true })",
-			"{ size: 3,",
-			"blur",
-			"this.props",
-			"this",
-			"properties",
-			"!this.state.active",
-			"#563d7c",
-			"font-size",
-			"age",
-			">p",
-			"section",
-			"Section",
-			"section",
-			"Section",
-			"section",
-			"Section",
-			"section",
-			"active",
-			"nav",
-			"elem",
-			"active",
-			"default",
-			"null",
-			"</p>",
-			"<p>",
-			"ADD",
-			"code",
-			"\\",
-			"getimagesize",
-			"$imageFileType",
-			"objPHPExcel",
-			"calc.",
-			"mprint",
-			"i",
-			"$this->formulae",
-			"$this->outputs",
-			"value",
-			"dependencies",
-			"outputs",
-			"inputs",
-			"explodeRange",
-			"$cell->getCoordinate()]",
-			"inputs",
-			"$list",
-			"showToast",
-			"\"",
-			"'",
-			"' +",
-			"route",
-			"self",
-			"//toastr.error(",
-			"showToast",
-			"<!-- end ngRepeat: item in controlWrapper.control.choices -->",
-			"<!-- ngRepeat: item in controlWrapper.control.choices -->",
-			"|",
-			"chartPoints",
-			"addSpot",
-			"chartPoints",
-			"location.G",
-			"chartPoints",
-			".series",
-			"$scope.chartData",
-			"results",
-			"addChartHoverEvent",
-			"e.row",
-			"plotElevation",
-			"jsAssets",
-			"elevationShown",
-			"white",
-			"md-inline-list-icon-label",
-			"md-list-item-content",
-			"$scope.placeName = '';",
-			"updateSearch",
-			"search = !search",
-			"followRoads",
-			"showSearch",
-			"Chart",
-			"makeChart",
-			"some",
-			"doughnut",
-			"DA4453",
-			"Person",
-			"person",
-			"app.",
-			"~",
-			"\"",
-			"break",
-			"console.log(",
-			"console.log",
-			"2 ",
+			"33",
+			"$comment-width",
+			"caret",
+			", ",
+			"head",
+			"oHead",
+			"update",
+			"200px",
+			"added",
+			"color",
+			"require",
+			"cache",
+			"key",
+			"components",
+			"./",
+			"        /*this.setState({\n            active: !this.props.active\n        });*/",
+			"Para",
+			"Para ",
+			"right",
+			"settings",
+			"class=",
+			"\">\n",
+			"class=",
+			"CommentPane",
+			".main",
+			"Nav",
+			"EditButtons",
+			"class=",
+			"class",
+			"div",
+			"product",
+			"Product",
+			"product",
+			"rows",
+			"type: 'para', text",
+			".row-action-primary i",
+			".list-group .list-group-item .row-picture i, .list-group .list-group-item .row-action-primary i",
+			"row-action",
+			"40",
+			" contenteditable=\"true\"",
+			", ",
+			" onclick=\"this.setAttribute('data-state', this.getAttribute('data-state') === 'show' ? 'hide' : 'show');\"",
+			"onclick=\"this.setAttribute('data-state', this.getAttribute('data-state') === 'show' ? 'hide' : 'show');\"",
+			"                            <button type=\"button\" class=\"btn btn-primary\" aria-label=\"edit text\" onclick=\"console.log('Edit');\">\n                                <span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span>\n                            </button>",
+			"openZip",
+			"error.div0",
+			"3",
+			"1",
 			"2",
-			"VM38047:12 ",
-			"VM38047:4 ",
-			"VM38047:5 ",
-			"VM38047:6 ",
-			"VM38047:16 ",
-			"VM38047:17 ",
-			"2FBRun",
-			"VM37985:4 ",
-			"VM37985:14 ",
-			"VM37985:10 ",
-			"VM37965:4 ",
-			"VM37965:14 ",
-			"2FBRun",
-			"VM37965:10 ",
-			"2FBRun",
-			"VM37636:10 ",
-			"VM37636:14 ",
-			"VM37636:4 ",
-			"2 ",
-			"VM37524:",
+			"'c'",
+			"VLOOKUP",
+			"table",
+			"HLOOKUP",
+			"5, 10",
+			"DIVIDE",
+			".3",
+			"ADD",
+			"from ",
+			", 'fairhurst'",
+			", \"fairhurst\"",
+			"true, 1",
+			"AND",
+			"\"",
+			"xor",
+			"* from 'formula-",
+			"formula-",
+			"'from",
+			"import * ",
+			"npm install ",
+			" --save",
+			"export",
+			"\"",
+			" - ",
+			"formula-",
+			"Events",
+			"events",
+			"profile",
+			"profileOptions",
+			"profileData",
+			"profileOptions",
+			"    $scope.profileOptions = {\n",
+			"profileOptions",
+			"false",
+			"visualization",
+			"\"",
+			"snapToRoad",
+			"drawProfile",
+			"updateDistance",
+			"drawProfile",
+			"modal-scroll-height",
+			"updateDistance",
+			"drawRoute",
+			"drawProfile",
+			"updateDistance",
+			"Distance",
+			"$parent",
+			"addMarker",
+			"$scope.distance",
+			"self",
+			"This",
+			"plotElevation",
 			"this",
-			"1000",
-			"idByElement",
-			"fname"
+			"Ascent",
+			"ascent",
+			"Ascent",
+			"ascent",
+			"followRoads",
+			"showToast",
+			"$scope.showToast",
+			"toastr",
+			"toast",
+			"toastr",
+			"self",
+			"this",
+			"self",
+			"$scope.drawProfile",
+			"this",
+			"showMarker",
+			"addMarker",
+			"span",
+			"div",
+			"mdBottomSheet",
+			"list",
+			"ctrl.",
+			"this",
+			" +",
+			"'",
+			"items"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -589,22 +447,7 @@
 		"regex": false,
 		"replace_history":
 		[
-			"app",
-			"careApp",
-			"careController",
-			"elevation-chart",
-			"margin-top-15",
-			"FB.d(",
-			")",
-			"(",
-			"\"",
-			"{{#if fields.data-vis.selectedvalue}}",
-			"{{#if fields.data-vis.selectedvalue}} data-vis=\"{{fields.data-vis.selectedvalue}}\"{{/if}}",
-			"{{fields.data-vis.selectedvalue}}",
-			"\\\"",
-			"\"",
-			"\\\"",
-			"\""
+			"MapCtrl"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -615,7 +458,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -624,15 +467,43 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1911,
+						"buffer_size": 2058,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1818,
+								1818
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 430.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/js/components/doc.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1221,
+								1221
 							]
 						],
 						"settings":
@@ -649,50 +520,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "src/js/components/doc.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1328,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								732,
-								732
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 10.0,
-						"translation.y": 50.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
 					"buffer": 2,
 					"file": "src/js/components/para.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2463,
+						"buffer_size": 2219,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1480,
-								1480
+								2070,
+								2008
 							]
 						],
 						"settings":
@@ -702,10 +543,68 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 688.0,
+						"translation.y": 831.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/styles/layout.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2654,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2175,
+								2175
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2051.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/js/components/comment.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								382,
+								382
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -717,7 +616,7 @@
 	},
 	"input":
 	{
-		"height": 36.0
+		"height": 38.0
 	},
 	"layout":
 	{
@@ -742,18 +641,19 @@
 		]
 	},
 	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
 	"output.git":
 	{
-		"height": 130.0
+		"height": 142.0
 	},
-	"output.hex_viewer_inspector":
-	{
-		"height": 130.0
-	},
+	"pinned_build_system": "",
 	"project": "EditDoc.sublime-project",
 	"replace":
 	{
@@ -763,103 +663,64 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"name",
-				"vendor\\phpoffice\\phpexcel\\Classes\\PHPExcel\\NamedRange.php"
-			],
-			[
-				"toolbar",
-				"src\\js\\controllers\\toolbarController.js"
-			],
-			[
-				"bottom",
-				"src\\js\\templates\\bottomSheet.html"
-			],
-			[
-				"map",
-				"src\\js\\controllers\\mapController.js"
-			],
-			[
-				"app",
-				"src\\js\\app.js"
-			],
-			[
-				"toolb",
-				"src\\js\\controllers\\toolbarController.js"
-			],
-			[
-				"file",
-				"src\\js\\files.js"
-			],
-			[
-				"app-v",
-				"src\\js\\app-vue.js"
-			],
-			[
-				"gulpf",
-				"gulpfile.js"
+				"package",
+				"package.json"
 			],
 			[
 				"gulp",
 				"gulpfile.js"
 			],
 			[
-				"chart",
-				"src\\styles\\chart.scss"
-			],
-			[
-				"layou",
-				"src\\styles\\layout.scss"
-			],
-			[
 				"app.j",
 				"src\\js\\app.js"
-			],
-			[
-				"todo",
-				"todo.txt"
-			],
-			[
-				"botto",
-				"node_modules\\angular-material\\modules\\closure\\bottomSheet\\bottomSheet.css"
 			],
 			[
 				"header",
 				"src\\js\\templates\\header.html"
 			],
 			[
-				"toolba",
-				"src\\js\\controllers\\toolbarController.js"
+				"app",
+				"src\\js\\app.js"
+			],
+			[
+				"app.js",
+				"src\\js\\app.js"
+			],
+			[
+				"header.ht",
+				"src\\js\\templates\\header.html"
+			],
+			[
+				"app-v",
+				"src\\js\\app-vue.js"
+			],
+			[
+				"layout",
+				"src\\styles\\layout.scss"
+			],
+			[
+				"search",
+				"src\\js\\templates\\searchResultsDialog.html"
+			],
+			[
+				"infopan",
+				"src\\js\\templates\\infopanel.html"
+			],
+			[
+				"infop",
+				"src\\js\\directives\\infopanel.js"
 			],
 			[
 				"info",
 				"src\\js\\templates\\infopanel.html"
 			],
 			[
-				"index",
-				"index.html"
-			],
-			[
-				"la.j",
-				"dist\\data\\la.js"
-			],
-			[
-				"lha",
-				"dist\\data\\lha.js"
-			],
-			[
-				"change_",
-				"database\\migrations\\2015_06_20_103127_change_lha_rates_column_titles.php"
-			],
-			[
-				"test",
-				"tests\\TestCase.php"
-			],
-			[
-				"inde",
-				"public\\index.php"
+				"file",
+				"src\\js\\files.js"
 			]
 		],
 		"width": 0.0
@@ -867,23 +728,38 @@
 	"select_project":
 	{
 		"height": 500.0,
+		"last_filter": "ma",
 		"selected_items":
 		[
 			[
+				"ma",
+				"E:\\Data\\Mark\\Projects\\Material Maps\\Material Maps.sublime-project"
+			],
+			[
+				"m",
+				"E:\\Data\\Mark\\Projects\\Material Maps\\Material Maps.sublime-project"
+			],
+			[
 				"",
-				"F:\\Data\\Mark\\Dropbox\\formbuilder\\Form Builder.sublime-project"
+				"E:\\Data\\Mark\\Projects\\Material Maps\\Material Maps.sublime-project"
+			],
+			[
+				"f",
+				"E:\\Data\\Mark\\Dropbox\\formbuilder\\js\\formbuilder.sublime-project"
 			]
 		],
-		"width": 498.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -891,7 +767,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 280.0,
+	"side_bar_width": 263.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

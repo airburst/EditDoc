@@ -35,6 +35,7 @@ let Para = React.createClass({
         } else if (document.selection && document.selection.type != "Control") {
             text = document.selection.createRange().text;
         }
+
         selection = {
             text: text,
             caret: caret.getPosition(event.target),
@@ -42,9 +43,6 @@ let Para = React.createClass({
         };
         console.log(selection);
         this.setState({selection: selection});
-        /*<svg>
-            <line x1="0" y1="200" x2="-300" y2="200" style="stroke:red;stroke-width:1"></line>
-        </svg>*/
     },
 
     checkChanges: function(event) {

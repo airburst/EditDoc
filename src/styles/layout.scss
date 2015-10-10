@@ -3,7 +3,7 @@ $doc-container-bg: #e2e2e2;
 $doc-background: white;
 $doc-padding: 50px;
 $top-space: 50px;
-$comment-width: 300px;
+$comment-box-color: #c0392b;
 
 html, body, .content {
     height:  100%;
@@ -98,38 +98,60 @@ html, body, .content {
     display: -moz-flex;
     display: -webkit-flex;
     display: flex;
-
-    -webkit-align-items: stretch;
-    align-items: stretch;
-}
-
-.contents, .comments {
-    flex-grow: 1;
 }
 
 .contents {
+    flex: 2;
     padding: 50px;
 }
 
+/* Comments */
 .comments {
+    flex-grow: 1;
     padding: 0;
     border-left: 1px solid #e2e2e2;
+}
+
+.comments-hide {
+    flex-grow: 0;
+    border-left: 0px;
+    -webkit-transition: all 0.33s ease-in 0.33s;
+    transition: all 0.33s ease-in 0.33s;
 }
 
 .comment-container {
     position: relative;
     height: 100%;
-    width: $comment-width;
+    width: 100%;
 }
 
 .comment-box {
     position: absolute;
-    width: $comment-width;
+    width: 100%;
     padding: 10px;
-    border: 1px solid #c0392b;
+    border: 1px solid $comment-box-color;
+}
+
+.comments-hide .comment-box {
+    position: absolute;
+    width: 0px;
+    padding: 0px;
+    border: 0px;
 }
 
 .comment-text > input {
     border: 0;
     width: 100%;
+}
+
+.comment-hl {
+    background-color: pink;
+    border-right: 1px solid red;
+}
+
+div.line{
+    transform-origin: 0 100%;
+    height: 1px;
+    background: $comment-box-color;
+    z-index: 5;
 }

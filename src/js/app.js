@@ -41,6 +41,12 @@ let DocContainer = React.createClass({
 
     addComment: function() {
         console.log('Add new comment...');
+
+        // Wrap highlighted text with span.comment-hl
+        // Does this work with a single caret position?
+        // 
+        // 
+        // 
     },
 
     addChange: function(change) {
