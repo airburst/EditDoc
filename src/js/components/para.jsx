@@ -39,11 +39,10 @@ let Para = React.createClass({
         selection = {
             text: text,
             caret: caret.getPosition(event.target),
-            height: event.pageY + document.getElementById('doc').scrollTop - 100
+            base: this.base()
         };
         console.log(selection);
-        console.log('Test for Line 3');
-        console.log(caret.lineNumber(this.props.id, 3));
+        //console.log(caret.getLine(this.props.id, selection.caret));
         this.setState({selection: selection});
     },
 
@@ -71,10 +70,10 @@ let Para = React.createClass({
         }
     },
 
-    top: function() {
+    base: function() {
         let item = document.getElementById(this.props.id).getBoundingClientRect(),
             docScrolled  = document.getElementById('doc').scrollTop;
-        return item.top + docScrolled - 106;
+        return item.bottom + docScrolled - 53;
     }
 
 });
