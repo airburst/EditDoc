@@ -11,7 +11,7 @@ let Comment = React.createClass({
             <div className="comment-container">
                 <div className="comment-box" style={commentCss}>
                     <div className="comment-text">
-                        <input type="text" />
+                        <p contentEditable="true"></p>
                     </div>
                 </div>
             </div>

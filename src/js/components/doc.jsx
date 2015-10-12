@@ -43,15 +43,14 @@ let Doc = React.createClass({
                 <Line
                     startX={line.startX}
                     endX={line.endX}
-                    top={line.top} />
+                    top={line.height} />
             );
         });
 
         // Comments
         this.props.comments.forEach(function(comment) {
-            console.log(comment);
             comments.push(
-                <Comment commentText={'Comment'} top={comment.top}/>
+                <Comment commentText={'Comment'} top={comment.height}/>
             );
         });
 
@@ -66,7 +65,7 @@ let Doc = React.createClass({
                         <div className={'comments' + (!this.props.showComments ? ' comments-hide' : '')} id="comments">
                             {comments}
                         </div>
-                        {lines}
+                        {(this.props.showComments) ? lines : null}
                     </div>
                 </div>
             </div>

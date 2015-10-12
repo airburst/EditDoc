@@ -1,15 +1,15 @@
 import React from 'react';
 import EditButtons from './edit-buttons';
-import caret from '../utils/selections';
+import selection from '../utils/selections';
 import diff from '../utils/diff';
 
 let Para = React.createClass({
 
-    getInitialState: function() {
+    /*getInitialState: function() {
         return {
             text: this.props.text
         };
-    },
+    },*/
 
     render: function() {
         return (
@@ -17,8 +17,8 @@ let Para = React.createClass({
                 <p 
                     id={this.props.id} 
                     onBlur={this.checkChanges}
-                    onMouseUp={this.onMouseUp}>
-                    {this.state.text}
+                    onMouseUp={this.onMouseUp}
+                    dangerouslySetInnerHTML={{__html: this.props.text}}>
                 </p>
             </a>
         );
@@ -26,7 +26,7 @@ let Para = React.createClass({
 
     onMouseUp: function(event) {
         var text = "",
-            selection;
+            selected;
 
         if (window.getSelection) {
             text = window.getSelection().toString();
@@ -34,14 +34,13 @@ let Para = React.createClass({
             text = document.selection.createRange().text;
         }
 
-        selection = {
-            id:    event.target.id,
-            text:  text,
-            caret: caret.getPosition(event.target),
-            base:  this.base()
-        };
-        //console.log(caret.getLine(this.props.id, selection.caret));
-        this.props.selected(selection);
+        selected = {
+            id:         event.target.id,
+            text:       text,
+            position:   selection.getPosition(event.target),
+            base:       this.base()
+        };       
+        this.props.selected(selected);
     },
 
     checkChanges: function(event) {
@@ -49,16 +48,16 @@ let Para = React.createClass({
         event.stopPropagation();
 
         let newText = event.target.innerText.trim();    //TODO: compare html, not text
-        if (newText !== this.state.text) {
+        if (newText !== this.props.text) {
             // Create change object
             let change = {
                 id:   event.target.id,
-                oldValue: this.state.text,
+                oldValue: this.props.text,
                 newValue: newText
             };
 
             // Diff
-            console.log(diff.compare(this.state.text, newText));
+            console.log(diff.compare(this.props.text, newText));
 
             // Set text state
             this.setState({text: newText});

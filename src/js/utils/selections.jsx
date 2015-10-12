@@ -1,4 +1,4 @@
-let caret = {
+let selection = {
 
     _getCaretPosition: function getCaretPosition(range, node) {
 
@@ -27,6 +27,30 @@ let caret = {
     getPosition: function(el) {
         let range = window.getSelection().getRangeAt(0);
         return this._getCaretPosition(range, el);
+    },
+
+    coordinates: function(id, text, position) {
+        let elem = document.getElementById(id),
+            fullText = elem.innerHTML,
+            newText,
+            commentId = 'comment-' + id;
+
+        // Wrap selected text in a span.comment-hl
+        newText = fullText.substring(0, position) +
+            '<span class="comment-hl" id="' + commentId + '">' +
+            text +
+            '</span>' +
+            fullText.substring(position + text.length, fullText.length);
+
+        elem.innerHTML = newText;
+
+        // Get coordinates from span
+        let s = document.getElementById(commentId).getBoundingClientRect();
+
+        return {
+            x: s.right - 1,
+            y: s.bottom
+        };
     },
 
     lineNumber: function(paragraphId, lineNum) {
@@ -123,4 +147,4 @@ let caret = {
 
 };
 
-export default caret;
+export default selection;
